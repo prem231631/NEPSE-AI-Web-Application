@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Features from "../components/Features";
 import "../styles/landing.css";
 
 function Landing(){
@@ -10,6 +11,7 @@ function Landing(){
 
             <Navbar/>
             <Hero/>
+            <Features/>
 
         </div>
     )
