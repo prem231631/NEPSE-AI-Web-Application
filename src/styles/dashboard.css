@@ -1,0 +1,21 @@
+.main{
+    margin-left:250px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:#0b2142;
+    padding:25px;
+    border-radius:15px;
+}
+
+.card h1{
+    margin-top:10px;
+    font-size:35px;
+}
