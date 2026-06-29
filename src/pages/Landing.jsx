@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 import "../styles/landing.css";
 
 function Landing(){
@@ -8,6 +9,7 @@ function Landing(){
         <div className="landing">
 
             <Navbar/>
+            <Hero/>
 
         </div>
     )

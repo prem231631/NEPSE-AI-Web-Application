@@ -1,0 +1,108 @@
+/* Hero Section */
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: #031427;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+}
+
+/* Badge */
+.hero-badge{
+    padding: 10px 20px;
+    border: 1px solid rgba (255,255,255,0.15);
+    border-radius: 25px;
+    color: #cbd8ff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background:rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+}
+
+/* Heading */
+.hero h1{
+    margin-top: 30px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    color: #bdd5ff;
+    max-width: 1000px;
+}
+
+.hero h1 span{
+    background: linear-gradient(90deg, #7ab8ff, #63e6d8);
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+}
+
+/* Description */
+.hero p{
+    margin-top: 25px;
+    max-width: 850px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #a4b3d0;
+}
+
+/* Buttons */
+.hero-buttons{
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
+}
+
+.primary-btn{
+    padding: 16px 45px;
+    border:none;
+    border-radius: 40px;
+    background: #b9ccff;
+    color: #16274b;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover{
+    transform: translateY(-3px);
+    box-shadow:0 10px 25px rgba(185, 204, 255, 0.3);
+}
+
+.secondary-btn{
+     padding: 16px 45px;
+    border:none;
+    border-radius: 40px;
+    background: #b9ccff;
+    color: #16274b;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover{
+    transform: translateY(-3px);
+    box-shadow:0 10px 25px rgba(185, 204, 255, 0.3);
+}
+
+/* Hero Image */
+.hero-image{
+    width: 90%;
+    max-width: 1400px;
+    margin-top: 60px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: #071a30;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.hero-image img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
