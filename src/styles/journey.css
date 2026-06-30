@@ -9,6 +9,7 @@
     gap: 100px;
 }
 
+
 .journey-left h2{
     color:white;
     font-size: 52px;
@@ -31,4 +32,26 @@
     display:flex;
     justify-content: center;
     align-items:center;
+}
+
+.step h3{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.step p{
+    color: #92a0bb;
+    line-height: 1.7;
+}
+
+.journey-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.journey-right img{
+    width: 350px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
