@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Features from "../components/Features";
 import "../styles/landing.css";
 import Journey from "../components/Journey";
+import Testimonials from "../components/Testimonials";
 
 function Landing(){
 
@@ -14,7 +15,8 @@ function Landing(){
             <Hero/>
             <Features/>
             <Journey/>
-
+            <Testimonials/>
+            
         </div>
     )
 }
