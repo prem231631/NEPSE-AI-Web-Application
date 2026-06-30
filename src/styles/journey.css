@@ -1,0 +1,34 @@
+.journey{
+    width:100%;
+    min-height: 700px;
+    padding:120px;
+    background: #031427;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 100px;
+}
+
+.journey-left h2{
+    color:white;
+    font-size: 52px;
+    margin-bottom: 60px;
+}
+
+.step{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.step-number{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #a8c3ff;
+    color: #031427;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
