@@ -4,6 +4,7 @@ import Features from "../components/Features";
 import "../styles/landing.css";
 import Journey from "../components/Journey";
 import Testimonials from "../components/Testimonials";
+import Footer from "../components/Footer";
 
 function Landing(){
 
@@ -16,7 +17,8 @@ function Landing(){
             <Features/>
             <Journey/>
             <Testimonials/>
-            
+            <Footer/>
+
         </div>
     )
 }
