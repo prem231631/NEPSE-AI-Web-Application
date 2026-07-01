@@ -5,7 +5,7 @@ import { BsGraphUpArrow } from "react-icons/bs";
 
 function Features(){
     return(
-        <section className="features-selection">
+        <section id="features" className="features-selection">
             <div className="features-header">
                 <h2>Professional Grade Features</h2>
 

@@ -1,10 +1,10 @@
 import "../styles/login.css";
 import {HiOutlineCpuChip} from "react-icons/hi2";
 import {Link} from "react-router-dom";
-
+import {useNavigate} from "react-router-dom";
 function Login() {
     return(
-        <div className="login-page">
+        <div id="login"className="login-page">
             <div className="login-card">
                 {/* logo */}
                 <div className="login-logo">

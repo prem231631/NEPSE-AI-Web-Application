@@ -1,7 +1,9 @@
 import "../styles/hero.css";
-import heroImage from "../assets/hero-image.jpg";
+import heroImage from "../assets/hero-image.jpeg";
+import { useNavigate } from "react-router-dom";
 
 function Hero(){
+    const navigate = useNavigate();
     return(
         <section className="hero">
             <div className="hero-badge">NEXT GEN MARKET PREDICTION</div>
@@ -14,8 +16,7 @@ function Hero(){
             </p>
 
             <div className="hero-buttons">
-                <button className="primary-btn">Get Started</button>
-                <button className="secondary-btn">Explore Dashboard</button>
+                <button className="primary-btn" onClick={()=>navigate("Register")}>Get Started/Sign Up</button>
             </div>
 
             <div className="hero-image">

@@ -3,7 +3,7 @@ import {FaStar} from "react-icons/fa";
 
 function Testimonials(){
     return(
-        <section className="testimonials-section">
+        <section id="testimonials" className="testimonials-section">
             <div className="testimonials-header">
                 <h2>What Investors Say</h2>
 

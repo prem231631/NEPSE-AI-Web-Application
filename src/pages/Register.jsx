@@ -1,8 +1,10 @@
 import "../styles/register.css";
 import {HiOutlineCpuChip} from "react-icons/hi2";
 import {FaArrowRight} from "react-icons/fa6";
-
+import { Navigate, useNavigate } from "react-router-dom";
+import {Link} from "react-router-dom";
 function Register() {
+    const navigate=useNavigate();
     return(
         <div className="register-page">
             {/* left section */}
@@ -75,9 +77,9 @@ function Register() {
                         <label>I agree to the Terms of Service and Privacy Policy.</label>
                     </div>
 
-                    <button className="register-btn">Create NEPSE AI Account <FaArrowRight/></button>
+                    <button className="register-btn" onClick={()=>navigate("Landing")}>Create NEPSE AI Account <FaArrowRight/></button>
 
-                    <p className="login-link">Already have an account? <a href="#">Login</a></p>
+                    <p className="login-link">Already have an account? <Link to="/login">Login</Link></p>
                 </div>
             </div>
         </div>

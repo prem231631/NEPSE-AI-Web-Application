@@ -3,7 +3,7 @@ import phoneImage from "../assets/phone.png";
 
 function Journey(){
     return(
-        <section className="journey">
+        <section id="journey" className="journey">
             <div className="journey-left">
                 <h2>Your Journey to <br/> Smarter Investing</h2>
 

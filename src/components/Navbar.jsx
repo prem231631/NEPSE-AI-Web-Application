@@ -1,8 +1,9 @@
 import "../styles/navbar.css";
-
+import { useNavigate } from "react-router-dom";
 import { HiOutlineCpuChip } from "react-icons/hi2";
 import {FiSettings} from "react-icons/fi";
 function Navbar(){
+  const navigate=useNavigate();
   return(
     <nav className="navbar">
       <div className="nav-logo">
@@ -14,13 +15,13 @@ function Navbar(){
       </div>
 
       <div className="nav-links">
-        <a href="#">Features</a>
-        <a href="#">Process</a>
-        <a href="#">Dashboard</a>
+        <a href="#features">Features</a>
+        <a href="#journey">Process</a>
+        <a href="#testimonials">Feedback</a>
       </div>
 
       <div className="nav-right">
-        <button className="start-btn">Get Started</button>
+        <button className="start-btn" onClick={()=>navigate("Login")}>Login</button>
         <FiSettings className="settings-icon"/>
       </div>
     </nav>

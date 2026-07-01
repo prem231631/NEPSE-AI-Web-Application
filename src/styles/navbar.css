@@ -2,7 +2,7 @@
 .navbar{
     width: 100vw;
     box-sizing: border-box;
-    height: 50px;
+    height: 60px;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@
 .nav-links a{
     text-decoration:none;
     color: #d6def7;
-    font-size:14px;
+    font-size:15px;
     transition: 0.3s;
 }
 
