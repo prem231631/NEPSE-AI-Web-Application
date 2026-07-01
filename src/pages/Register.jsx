@@ -12,7 +12,7 @@ function Register() {
                         <HiOutlineCpuChip/>
                     </div>
 
-                    <span>NEPSE AI</span>
+                    <span className="logo-text">NEPSE AI</span>
                 </div>
 
                 <div className="hero-content">
@@ -43,8 +43,6 @@ function Register() {
                             <h2>Bullish ↑ 4.2%</h2>
                             <p>Strong support identified at 785.00</p>
                         </div>
-
-                        <div className="chart-line"></div>
                     </div>
                 </div>
             </div>
@@ -74,7 +72,7 @@ function Register() {
 
                     <div className="checkbox">
                         <input type="checkbox"/>
-                        <span>I agree to the Terms of Service and Privacy Policy.</span>
+                        <label>I agree to the Terms of Service and Privacy Policy.</label>
                     </div>
 
                     <button className="register-btn">Create NEPSE AI Account <FaArrowRight/></button>
