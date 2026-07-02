@@ -1,19 +1,17 @@
 import {useState} from "react";
 import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
+import DashboardNavbar from "../components/DashboardNavbar";
 
 function Dashboard(){
-    const [showSidebar, setShowSidebar] = useState(false);
+    const [showSidebar, setShowSidebar]=useState(false);
 
     return(
-        <div className="dashboard-layout">
-            <Navbar toggleSidebar={()=>setShowSidebar(!showSidebar)}/>
-            
-            {showSidebar && <Sidebar/>}
+        <div>
+            <DashboardNavbar toggleSidebar={()=> setShowSidebar(!showSidebar)}/>
 
-            <main className="dashboard-content">
-                <h1>Dashboard</h1>
-            </main>
+            <div className="dashboard-content">
+                Dashboard Content
+            </div>
         </div>
     );
 }

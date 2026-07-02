@@ -2,6 +2,7 @@ import "../styles/navbar.css";
 import { useNavigate } from "react-router-dom";
 import { HiOutlineCpuChip } from "react-icons/hi2";
 import {FiSettings} from "react-icons/fi";
+
 function Navbar(){
   const navigate=useNavigate();
   return(
