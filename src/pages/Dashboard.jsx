@@ -9,6 +9,8 @@ function Dashboard(){
         <div>
             <DashboardNavbar toggleSidebar={()=> setShowSidebar(!showSidebar)}/>
 
+            {showSidebar && <Sidebar/>}
+
             <div className="dashboard-content">
                 Dashboard Content
             </div>

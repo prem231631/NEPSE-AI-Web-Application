@@ -1,21 +1,41 @@
 import { Link } from "react-router-dom";
 import "./../styles/sidebar.css";
+import {FiGrid, FiTrendingUp, FiCpu, FiStar, FiBell, FiSettings, FiLogOut} from "react-icons/fi";
 
 function Sidebar() {
   return (
     <aside className="sidebar">
-      <Link to="/dashboard">Dashboard</Link>
+      <div className="sidebar-menu">
+        <div className="sidebar-item active">
+          <FiGrid/>
+          <span>Dashboard</span>
+        </div>
 
-      <Link to ="/market">Market</Link>
+        <div className="sidebar-item">
+          <FiTrendingUp/>
+          <span>Market Analysis</span>
+        </div>
 
-      <Link to ="/prediction">AI Prediction</Link>
+        <div className="sidebar-item">
+          <FiCpu/>
+          <span>Prediction</span>
+        </div>
 
-      <Link to ="/watchlist">Watchlist</Link>
+        <div className="sidebar-item">
+          <FiStar/>
+          <span>Watchlist</span>
+        </div>
 
-      <Link to ="/notification">Notification</Link>
+        <div className="sidebar-item">
+          <FiSettings/>
+          <span>Settings</span>
+        </div>
+      </div>
 
-      <link to ="/settings">Settings</link>
-      
+      <div className="sidebar-logout">
+        <FiLogOut/>
+        <span>Logout</span>
+      </div>
     </aside>
   );
 }

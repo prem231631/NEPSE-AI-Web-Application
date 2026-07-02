@@ -1,23 +1,66 @@
 .sidebar{
-    width:250px;
-    height:100vh;
-    background:#071b36;
-    color:white;
-    position:fixed;
-    padding:30px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 260px;
+    height: calc(100vh - 70px);
+    background: #07162e;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 25px 15px;
+    animation: slideIn .25s ease;
 }
 
-.sidebar h2{
-    margin-bottom:40px;
+.sidebar-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.sidebar a{
-    display:block;
-    padding:15px;
-    margin-bottom:10px;
-    border-radius:10px;
+.sidebar-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    color: #d8e3ff;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.sidebar a:hover{
-    background:#3f73ff;
+.sidebar-item:hover{
+    background: rgba(255,255,255, -.08);
+}
+
+.sidebar-item.active{
+    background: #1d2f59;
+}
+
+.sidebar-item svg, .sidebar-logout svg{
+    font-size: 20px;
+}
+
+.sidebar-logout{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    color: #ff9090;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.sidebar-logout:hover{
+    background: rgba(255,255,255, 0.08);
+}
+
+@keyframes slideIn{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
 }
