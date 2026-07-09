@@ -1,6 +1,7 @@
 import {useState} from "react";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
+import WelcomeBanner from "../components/WelcomeBanner";
 
 function Dashboard(){
     const [showSidebar, setShowSidebar]=useState(false);
@@ -12,7 +13,7 @@ function Dashboard(){
             {showSidebar && <Sidebar/>}
 
             <div className="dashboard-content">
-                Dashboard Content
+                <WelcomeBanner/>
             </div>
         </div>
     );
