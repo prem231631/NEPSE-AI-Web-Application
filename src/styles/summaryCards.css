@@ -49,3 +49,21 @@
     color:#56d364;
     font-weight:600;
 }
+
+.market-open{
+    color:#22c55e;
+    font-weight:600;
+}
+
+.market-closed{
+    color:#ef4444;
+    font-weight:600;
+}
+
+.icon-open{
+    background:#22c55e;
+}
+
+.icon-closed{
+    background:#ef4444;
+}
