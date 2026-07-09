@@ -2,6 +2,7 @@ import {useState} from "react";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
 import WelcomeBanner from "../components/WelcomeBanner";
+import SummaryCards from "../components/SummaryCards";
 import "../styles/dashboard.css";
 function Dashboard(){
     const [sidebarOpen, setSidebarOpen]=useState(true);
@@ -18,6 +19,7 @@ function Dashboard(){
                 />
 
                 <WelcomeBanner/>
+                <SummaryCards/>
             </div>
         </div>
   );
