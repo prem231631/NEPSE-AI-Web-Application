@@ -10,8 +10,17 @@
     flex-direction: column;
     justify-content:space-between;
     padding: 25px 15px;
-    animation: slideIn .25s ease;
+    transition: transform .3s ease;
 }
+
+.sidebar.open{
+    transform:translateX(0);
+}
+
+.sidebar.closed{
+    transform:translateX(-100%);
+}
+
 
 .sidebar-menu{
     display: flex;

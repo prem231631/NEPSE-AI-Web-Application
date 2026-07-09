@@ -1,5 +1,16 @@
-.main{
-    margin-left:250px;
+.dashboard-layout{
+    display: flex;
+}
+
+.dashboard-content{
+    flex: 1;
+    margin-left: 0;
+    padding-top: 70px;   /* height of navbar */
+    transition: margin-left 0.3s ease;
+}
+
+.dashboard-content.sidebar-open{
+    margin-left: 260px;
 }
 
 .cards{
@@ -19,3 +30,4 @@
     margin-top:10px;
     font-size:35px;
 }
+

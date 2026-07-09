@@ -1,11 +1,11 @@
 import {FiMenu, FiBell, FiUser} from "react-icons/fi";
 import "../styles/dashboardNavbar.css";
 
-function DashboardNavbar({toggleSidebar}){
+function DashboardNavbar({setSidebarOpen}){
     return(
         <header className="dashboard-navbar">
             <div className="dashboard-left">
-                <FiMenu className="menu-icon" onClick={toggleSidebar}/>
+                <FiMenu className="menu-icon" onClick={()=>setSidebarOpen(prev=>!prev)}/>
 
                 <h2>NEPSE AI</h2>
             </div>

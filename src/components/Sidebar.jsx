@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import "./../styles/sidebar.css";
 import {FiGrid, FiTrendingUp, FiCpu, FiStar, FiBell, FiSettings, FiLogOut} from "react-icons/fi";
 
-function Sidebar() {
+function Sidebar({sidebarOpen}) {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${sidebarOpen ? "open" : "closed"}`}>
       <div className="sidebar-menu">
         <div className="sidebar-item active">
           <FiGrid/>

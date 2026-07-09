@@ -2,21 +2,25 @@ import {useState} from "react";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
 import WelcomeBanner from "../components/WelcomeBanner";
-
+import "../styles/dashboard.css";
 function Dashboard(){
-    const [showSidebar, setShowSidebar]=useState(false);
+    const [sidebarOpen, setSidebarOpen]=useState(true);
 
-    return(
-        <div>
-            <DashboardNavbar toggleSidebar={()=> setShowSidebar(!showSidebar)}/>
+    return (
+        <div className="dashboard-layout">
+            <Sidebar
+                sidebarOpen={sidebarOpen}
+            />
 
-            {showSidebar && <Sidebar/>}
+            <div className={`dashboard-content ${sidebarOpen ? "sidebar-open" : ""}`}>
+                <DashboardNavbar
+                setSidebarOpen={setSidebarOpen}
+                />
 
-            <div className="dashboard-content">
                 <WelcomeBanner/>
             </div>
         </div>
-    );
+  );
 }
 
 export default Dashboard;
