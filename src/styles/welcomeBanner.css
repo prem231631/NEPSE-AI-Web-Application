@@ -37,14 +37,23 @@
     border-radius:50px;
 }
 
-.status-dot{
-    width:10px;
-    height:10px;
-    background:#31ff73;
-    border-radius:50%;
+.status-open{
+    color:#22c55e;
+    font-weight:600;
 }
 
-.market-status p{
-    color:white;
+.status-closed{
+    color:#ef4444;
     font-weight:600;
+}
+
+.welcome-status{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.welcome-status small{
+    color:#b7c4e0;
+    font-size:14px;
 }

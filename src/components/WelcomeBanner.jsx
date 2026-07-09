@@ -1,5 +1,9 @@
 import "../styles/welcomeBanner.css";
+import { getMarketStatus } from "../utils/marketStatus";
+
 function WelcomeBanner(){
+    const {marketOpen, marketStatus, marketMessage}= getMarketStatus();
+
     const hour = new Date().getHours();
     let greeting ="Good Evening";
 
@@ -19,9 +23,11 @@ function WelcomeBanner(){
             </div>
 
             <div className="market-status">
-                <span className="status-dot"></span>
-            
-                <p>Market Open</p>
+                <div className="welcome-status">
+                    <span className={marketOpen ? "status-open" : "status-closed"}>
+                        {marketOpen ? "🟢 Market Open" : "🔴 Market Closed"}
+                    </span>
+                </div>
             </div>
         </section>
     );
