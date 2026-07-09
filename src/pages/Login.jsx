@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 function Login() {
     return(
-        <div id="login"className="login-page">
+        <div className="login-page">
             <div className="login-card">
                 {/* logo */}
                 <div className="login-logo">
