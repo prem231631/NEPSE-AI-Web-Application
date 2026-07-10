@@ -6,6 +6,7 @@ import SummaryCards from "../components/SummaryCards";
 import AIRecommendation from "../components/AIRecommendation";
 import MarketOverview from "../components/MarketOverview";
 import TrendingStocks from "../components/TrendingStocks";
+import WatchlistPreview from "../components/WatchlistPreview";
 
 import "../styles/dashboard.css";
 function Dashboard(){
@@ -30,7 +31,10 @@ function Dashboard(){
                     <MarketOverview/>
                 </div>
 
-                <TrendingStocks/>
+                <div className="dashboard-grid">
+                    <TrendingStocks/>
+                    <WatchlistPreview/>
+                </div>
             </div>
         </div>
   );
