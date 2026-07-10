@@ -1,0 +1,109 @@
+.watchlist-card{
+    background:#101d3d;
+    border-radius:20px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.watchlist-card:hover{
+    border-color:#3b82f6;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.watchlist-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.watchlist-header h2{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+}
+
+.watchlist-header button{
+    background:#1d4ed8;
+    color:white;
+    border:none;
+    padding:8px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.watchlist-header button:hover{
+    background:#2563eb;
+}
+
+.watch-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.watch-item:last-child{
+    border-bottom:none;
+}
+
+.watch-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.watch-logo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#3b82f6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+}
+
+.watch-left h4{
+    color:white;
+    margin:0;
+}
+
+.watch-left small{
+    color:#9fb4e5;
+}
+
+.watch-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.watch-right strong{
+    color:white;
+}
+
+.watch-badge{
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+    font-size:12px;
+    font-weight:600;
+}
+
+.watch-badge.buy{
+    background:#22c55e;
+}
+
+.watch-badge.hold{
+    background:#f59e0b;
+}
+
+.watch-badge.sell{
+    background:#ef4444;
+}
