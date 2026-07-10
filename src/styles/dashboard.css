@@ -31,3 +31,11 @@
     font-size:35px;
 }
 
+.dashboard-grid{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
+    margin: 0 30px 30px;
+    align-items: start;
+}
+

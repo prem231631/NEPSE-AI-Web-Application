@@ -4,6 +4,7 @@ import DashboardNavbar from "../components/DashboardNavbar";
 import WelcomeBanner from "../components/WelcomeBanner";
 import SummaryCards from "../components/SummaryCards";
 import AIRecommendation from "../components/AIRecommendation";
+import MarketOverview from "../components/MarketOverview";
 
 import "../styles/dashboard.css";
 function Dashboard(){
@@ -22,7 +23,11 @@ function Dashboard(){
 
                 <WelcomeBanner/>
                 <SummaryCards/>
-                <AIRecommendation/>
+                
+                <div className="dashboard-grid">
+                    <AIRecommendation/>
+                    <MarketOverview/>
+                </div>
             </div>
         </div>
   );
