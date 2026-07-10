@@ -7,6 +7,7 @@ import AIRecommendation from "../components/AIRecommendation";
 import MarketOverview from "../components/MarketOverview";
 import TrendingStocks from "../components/TrendingStocks";
 import WatchlistPreview from "../components/WatchlistPreview";
+import LatestNews from "../components/LatestNews";
 
 import "../styles/dashboard.css";
 function Dashboard(){
@@ -35,6 +36,9 @@ function Dashboard(){
                     <TrendingStocks/>
                     <WatchlistPreview/>
                 </div>
+
+                <LatestNews/>
+
             </div>
         </div>
   );
