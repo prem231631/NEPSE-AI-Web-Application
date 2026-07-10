@@ -1,0 +1,118 @@
+.trending-card{
+    background:#101d3d;
+    border-radius:20px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.trending-card:hover{
+    border-color:#3b82f6;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.trending-header h2{
+    color:white;
+    margin-bottom:25px;
+}
+
+.stock-group{
+    margin-bottom:30px;
+}
+
+.gainer-title, .loser-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    margin-bottom:15px;
+}
+
+.gainer-title{
+    color:#22c55e;
+}
+
+.loser-title{
+    color:#ef4444;
+}
+
+.stock-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.stock-row:last-child{
+    border-bottom:none;
+}
+
+.stock-info{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.stock-logo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#1d4ed8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+}
+
+.stock-info h4{
+    color:white;
+    margin:0;
+}
+
+.stock-info small{
+    color:#9fb4e5;
+}
+
+.stock-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.stock-price{
+    color:white;
+}
+
+.positive{
+    color:#22c55e;
+    font-weight:600;
+}
+
+.negative{
+    color:#ef4444;
+    font-weight:600;
+}
+
+.badge{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.badge.buy{
+    background:#22c55e;
+    color:white;
+}
+
+.badge.sell{
+    background:#ef4444;
+    color:white;
+}
+
+.badge.hold{
+    background:#f59e0b;
+    color:white;
+}
