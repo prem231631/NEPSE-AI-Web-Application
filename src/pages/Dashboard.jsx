@@ -26,17 +26,22 @@ function Dashboard(){
 
                 <SummaryCards/>
                 
-                <div className="dashboard-grid">
+                <div className="dashboard-grid1">
                     <AIRecommendation/>
                     <MarketOverview/>
                 </div>
 
-                <div className="dashboard-grid">
+                <div className="dashboard-grid2">
                     <TrendingStocks/>
-                    <WatchlistPreview/>
+
+                    <div classname="dashboard-column">
+                        <WatchlistPreview/>
+                        <LatestNews/>
+                    </div>
+                    
                 </div>
 
-                <LatestNews/>
+                
 
             </div>
         </div>
