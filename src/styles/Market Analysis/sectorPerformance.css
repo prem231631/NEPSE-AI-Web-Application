@@ -1,0 +1,40 @@
+.sector-card{
+    background:#182449;
+    border-radius:18px;
+    padding:28px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.sector-card h2{
+    color:white;
+    margin-bottom:25px;
+}
+
+.sector-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.sector-box{
+    background:#24314f;
+    border-radius:14px;
+    padding:22px;
+}
+
+.sector-box h4{
+    color:#b8c6e6;
+    margin-bottom:12px;
+}
+
+.green{
+    color:#37d67a;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.red{
+    color:#ff6b6b;
+    font-size:28px;
+    font-weight:bold;
+}
