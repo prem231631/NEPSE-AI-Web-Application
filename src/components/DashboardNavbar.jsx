@@ -1,7 +1,17 @@
 import {FiMenu, FiBell, FiUser, FiSettings, FiSearch} from "react-icons/fi";
 import "../styles/dashboardNavbar.css";
+import stocks from "../data/stocks";
+import {useState} from "react";
 
 function DashboardNavbar({setSidebarOpen}){
+
+    const [search, setSearch] = useState("");
+
+    const filteredStocks = stocks.filter((stock) =>
+        stock.symbol.toLowerCase().includes(search.toLowerCase()) ||
+        stock.name.toLowerCase().includes(search.toLowerCase())
+    );
+
     return(
         <header className="dashboard-navbar">
             <div className="dashboard-left">
@@ -16,7 +26,28 @@ function DashboardNavbar({setSidebarOpen}){
                 <input
                     type="text"
                     placeholder="Search stocks, companies or AI insights..."
+                    value={search}
+                    onChange={(e)=>setSearch (e.target.value)}
                 />
+
+                {search && (
+                    <div className="search-dropdown">
+                        {filteredStocks.length > 0 ? (
+                            filteredStocks.map((stock, index) => (
+                                <div className="search-item" key={index}>
+                                    <strong>{stock.symbol}</strong>
+
+                                    <span>{stock.name}</span>
+                                </div>
+                            ))
+                        ) : (
+
+                            <div className="search-item">
+                                No stock found
+                            </div>
+                        )}
+                    </div>
+                )}
             </div>
 
             <div className="dashboard-right">
