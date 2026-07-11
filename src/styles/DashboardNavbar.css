@@ -19,6 +19,43 @@
     gap: 20px;
 }
 
+.dashboard-search{
+    flex:1;
+    max-width:520px;
+    margin:0 50px;
+    position:relative;
+}
+
+.dashboard-search input{
+    width:100%;
+    padding:13px 18px 13px 48px;
+    border:none;
+    border-radius:30px;
+    background:#0f1c3d;
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:.25s;
+}
+
+.dashboard-search input::placeholder{
+    color:#8fa6d8;
+}
+
+.dashboard-search input:focus{
+    border:1px solid #4d8dff;
+    box-shadow:0 0 12px rgba(77,141,255,.3);
+}
+
+.search-icon{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#8fa6d8;
+    font-size:18px;
+}
+
 .dashboard-right{
     display: flex;display: flex;
     align-items: center;

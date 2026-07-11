@@ -1,4 +1,4 @@
-import {FiMenu, FiBell, FiUser} from "react-icons/fi";
+import {FiMenu, FiBell, FiUser, FiSettings, FiSearch} from "react-icons/fi";
 import "../styles/dashboardNavbar.css";
 
 function DashboardNavbar({setSidebarOpen}){
@@ -21,6 +21,7 @@ function DashboardNavbar({setSidebarOpen}){
 
             <div className="dashboard-right">
                 <FiBell/>
+                <FiSettings/>
                 <FiUser/>
             </div>
         </header>
