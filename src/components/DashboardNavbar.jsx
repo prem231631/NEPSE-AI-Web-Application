@@ -10,6 +10,15 @@ function DashboardNavbar({setSidebarOpen}){
                 <h2>NEPSE AI</h2>
             </div>
 
+            <div className="dashboard-search">
+                <FiSearch className="search-icon"/>
+
+                <input
+                    type="text"
+                    placeholder="Search stocks, companies or AI insights..."
+                />
+            </div>
+
             <div className="dashboard-right">
                 <FiBell/>
                 <FiUser/>
