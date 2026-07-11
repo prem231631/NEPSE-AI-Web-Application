@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./../styles/sidebar.css";
 import {FiGrid, FiTrendingUp, FiCpu, FiStar, FiBell, FiSettings, FiLogOut} from "react-icons/fi";
 
@@ -6,30 +6,30 @@ function Sidebar({sidebarOpen}) {
   return (
     <aside className={`sidebar ${sidebarOpen ? "open" : "closed"}`}>
       <div className="sidebar-menu">
-        <Link className="sidebar-item active">
-          <FiGrid/>
+        <NavLink to="/dashboard" className={({ isActive }) => isActive ? "sidebar-item active" : "sidebar-item"}>
+          <FiGrid />
           <span>Dashboard</span>
-        </Link>
+        </NavLink>
 
-        <Link className="sidebar-item">
-          <FiTrendingUp/>
+        <NavLink to="/marketAnalysis" className={({ isActive }) => isActive ? "sidebar-item active" : "sidebar-item"}>
+          <FiTrendingUp />
           <span>Market Analysis</span>
-        </Link>
+        </NavLink>
 
-        <div className="sidebar-item">
-          <FiCpu/>
+        <NavLink to="/prediction" className={({ isActive }) => isActive ? "sidebar-item active" : "sidebar-item"}>
+          <FiCpu />
           <span>Prediction</span>
-        </div>
+        </NavLink>
 
-        <div className="sidebar-item">
-          <FiStar/>
+        <NavLink to="/watchlist" className={({ isActive }) => isActive ? "sidebar-item active" : "sidebar-item"}>
+          <FiStar />
           <span>Watchlist</span>
-        </div>
+        </NavLink>
 
-        <div className="sidebar-item">
-          <FiSettings/>
+        <NavLink to="/settings" className={({ isActive }) => isActive ? "sidebar-item active" : "sidebar-item"}>
+          <FiSettings />
           <span>Settings</span>
-        </div>
+        </NavLink>
       </div>
 
       <div className="sidebar-logout">
