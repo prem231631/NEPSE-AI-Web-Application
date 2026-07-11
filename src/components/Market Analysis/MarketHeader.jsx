@@ -1,4 +1,4 @@
-import "../styles/marketHeader.css";
+import "../../styles/Market Analysis/marketHeader.css";
 
 function MarketHeader() {
     return (

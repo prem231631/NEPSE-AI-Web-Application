@@ -6,15 +6,15 @@ function Sidebar({sidebarOpen}) {
   return (
     <aside className={`sidebar ${sidebarOpen ? "open" : "closed"}`}>
       <div className="sidebar-menu">
-        <div className="sidebar-item active">
+        <Link className="sidebar-item active">
           <FiGrid/>
           <span>Dashboard</span>
-        </div>
+        </Link>
 
-        <div className="sidebar-item">
+        <Link className="sidebar-item">
           <FiTrendingUp/>
           <span>Market Analysis</span>
-        </div>
+        </Link>
 
         <div className="sidebar-item">
           <FiCpu/>

@@ -1,4 +1,4 @@
-import "../styles/sectorPerformance.css";
+import "../../styles/Market Analysis/sectorPerformance.css";
 
 const sectors = [
     {
