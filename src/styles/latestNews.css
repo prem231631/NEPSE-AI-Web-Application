@@ -21,14 +21,17 @@
 
 .show-more{
 
-    color:#6da7ff;
-    text-decoration:none;
-    font-weight:600;
+    background:#1d4ed8;
+    color:white;
+    border:none;
+    padding:8px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .show-more:hover{
-
-    color:white;
+    background:#2563eb;
 }
 
 .news-card{
@@ -56,4 +59,16 @@
 
     color:#c3d1ec;
     line-height:1.6;
+}
+
+.news-link{
+    color:#ffffff;
+    text-decoration:none;
+    transition:.25s;
+    font-weight:600;
+}
+
+.news-link:hover{
+    color:#4f8cff;
+    text-decoration:underline;
 }

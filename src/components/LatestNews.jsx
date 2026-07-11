@@ -22,9 +22,17 @@ function LatestNews({ full = false }) {
                 <h2>Latest NEPSE News</h2>
 
                 {!full && (
-                    <Link to="/news" className="show-more">
+                    <button
+                        className="show-more"
+                        onClick={() =>
+                            window.open(
+                                "https://news.google.com/search?q=NEPSE",
+                                "_blank"
+                            )
+                        }
+                    >
                         Show More →
-                    </Link>
+                    </button>
                 )}
             </div>
 
@@ -34,7 +42,16 @@ function LatestNews({ full = false }) {
                         {item.time}
                     </p>
 
-                    <h3>{item.title}</h3>
+                    <h4>
+                        <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="news-link"
+                        >
+                            {item.title}
+                        </a>
+                    </h4>
 
                     <p>{item.summary}</p>
                 </div>

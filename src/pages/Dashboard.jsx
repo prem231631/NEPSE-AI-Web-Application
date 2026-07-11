@@ -1,7 +1,7 @@
 import {useState} from "react";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
-import WelcomeBanner from "../components/WelcomeBanner";
+
 import SummaryCards from "../components/SummaryCards";
 import AIRecommendation from "../components/AIRecommendation";
 import MarketOverview from "../components/MarketOverview";
@@ -24,7 +24,6 @@ function Dashboard(){
                 setSidebarOpen={setSidebarOpen}
                 />
 
-                <WelcomeBanner/>
                 <SummaryCards/>
                 
                 <div className="dashboard-grid">
