@@ -1,73 +1,79 @@
 .heatmap-card{
-    background:#182449;
+    background:#182548;
     border-radius:18px;
-    border:1px solid rgba(255,255,255,.08);
-    padding:25px;
-    flex:2;
+    padding:20px;
 }
 
 .heatmap-header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
-.heatmap-header h2{
+.heatmap-header h3{
     color:white;
 }
 
 .heatmap-header span{
-    color:#9aa7c2;
-    font-size:14px;
+    color:#9fb2df;
+    font-size:13px;
 }
 
 .heatmap-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+
+    grid-template-columns:2fr 1.3fr 1.3fr 1fr;
+
+    grid-template-rows:120px 80px;
+
+    gap:10px;
 }
 
-.heatmap-box{
-    border-radius:12px;
+.tile{
+    border-radius:10px;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+
     color:white;
+
     font-weight:600;
-    transition:.25s;
-    cursor:pointer;
+
+    transition:.3s;
 }
 
-.heatmap-box:hover{
+.tile:hover{
     transform:scale(1.03);
 }
 
+.gain{
+    background:#238b45;
+}
+
+.loss{
+    background:#9e3137;
+}
+
 .large{
-    height:170px;
+    grid-row:span 2;
 }
 
 .medium{
-    height:120px;
+    grid-row:span 1;
 }
 
 .small{
-    height:80px;
+    grid-row:span 1;
 }
 
-.positive{
-    background:#1d7c45;
+.tile h2{
+    font-size:28px;
 }
 
-.negative{
-    background:#8a2d37;
-}
-
-.heatmap-box h3{
-    margin-bottom:8px;
-}
-
-.heatmap-box p{
-    font-size:15px;
+.tile p{
+    margin-top:10px;
+    font-size:22px;
 }
