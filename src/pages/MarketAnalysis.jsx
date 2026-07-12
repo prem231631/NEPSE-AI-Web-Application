@@ -5,6 +5,8 @@ import DashboardNavbar from "../components/DashboardNavbar";
 
 import MarketHeader from "../components/Market Analysis/MarketHeader";
 import SectorPerformance from "../components/Market Analysis/SectorPerformance";
+import MarketHeatmap from "../components/Market Analysis/MarketHeatmap";
+import RecentEvents from "../components/Market Analysis/RecentEvents";
 
 import "../styles/dashboard.css";
 import "../styles/Market Analysis/marketAnalysis.css";
@@ -29,6 +31,12 @@ function MarketAnalysis() {
           <MarketHeader />
 
           <SectorPerformance />
+
+          <div className="market-middle">
+            <MarketHeatmap/>
+
+            <RecentEvents/>
+          </div>
         </div>
       </div>
     </div>

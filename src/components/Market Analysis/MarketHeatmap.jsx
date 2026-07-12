@@ -1,4 +1,4 @@
-import "../styles/Market Analysis/marketHeatmap.css";
+import "../../styles/Market Analysis/marketHeatmap.css";
 
 const heatmapData = [
   { symbol: "NABIL", change: "+2.31%", positive: true, size: "large" },
