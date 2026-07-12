@@ -14,26 +14,24 @@ const heatmapData = [
 function MarketHeatmap() {
   return (
     <section className="heatmap-card">
+        <div className="heatmap-header">
+            <h2>Market Heatmap</h2>
+            <span>Top Performing Stocks</span>
+        </div>
 
-      <div className="heatmap-header">
-        <h2>Market Heatmap</h2>
-        <span>Top Performing Stocks</span>
-      </div>
-
-      <div className="heatmap-grid">
-        {heatmapData.map((stock) => (
-          <div
-            key={stock.symbol}
-            className={`heatmap-box ${stock.size} ${
-              stock.positive ? "positive" : "negative"
-            }`}
-          >
-            <h3>{stock.symbol}</h3>
-            <p>{stock.change}</p>
-          </div>
-        ))}
-      </div>
-
+        <div className="heatmap-grid">
+            {heatmapData.map((stock) => (
+                <div
+                    key={stock.symbol}
+                    className={`heatmap-box ${stock.size} ${
+                        stock.positive ? "positive" : "negative"
+                    }`}
+                >
+                    <h3>{stock.symbol}</h3>
+                    <p>{stock.change}</p>
+                </div>
+            ))}
+        </div>
     </section>
   );
 }
