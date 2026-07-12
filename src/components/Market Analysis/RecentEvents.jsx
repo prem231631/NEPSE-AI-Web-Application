@@ -8,7 +8,7 @@ function MarketEvents() {
     useEffect(() => {
         fetch("http://127.0.0.1:8000/news")
             .then((res) => res.json())
-            .then((data) => setNews(data.slice(0, 5)))
+            .then((data) => setNews(data.slice(0, 3)))
             .catch((err) => console.error(err));
     }, []);
 

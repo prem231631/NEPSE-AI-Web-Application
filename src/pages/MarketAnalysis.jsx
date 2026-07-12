@@ -30,10 +30,13 @@ function MarketAnalysis() {
         <div className="market-analysis">
           <MarketHeader />
 
-          <SectorPerformance />
-
           <div className="market-middle">
-            <MarketHeatmap/>
+            <div className="market-column">
+              <SectorPerformance />
+
+              <MarketHeatmap/>
+            </div>
+            
 
             <RecentEvents/>
           </div>
