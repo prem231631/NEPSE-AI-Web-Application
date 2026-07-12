@@ -7,7 +7,7 @@ import MarketHeader from "../components/Market Analysis/MarketHeader";
 import SectorPerformance from "../components/Market Analysis/SectorPerformance";
 import MarketHeatmap from "../components/Market Analysis/MarketHeatmap";
 import RecentEvents from "../components/Market Analysis/RecentEvents";
-
+import MarketTable from "../components/Market Analysis/MarketTable";
 import "../styles/dashboard.css";
 import "../styles/Market Analysis/marketAnalysis.css";
 
@@ -39,6 +39,8 @@ function MarketAnalysis() {
             
 
             <RecentEvents/>
+
+            <MarketTable/>
           </div>
         </div>
       </div>
