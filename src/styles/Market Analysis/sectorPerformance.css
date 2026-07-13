@@ -22,18 +22,25 @@
     padding:22px;
 }
 
+.sector-box p{
+    background: transparent !important;
+    margin: 0;
+    padding: 0;
+}
+
+
 .sector-box h4{
     color:#b8c6e6;
     margin-bottom:12px;
 }
 
-.green{
+.sector-positive{
     color:#37d67a;
     font-size:28px;
     font-weight:bold;
 }
 
-.red{
+.sector-negative{
     color:#ff6b6b;
     font-size:28px;
     font-weight:bold;

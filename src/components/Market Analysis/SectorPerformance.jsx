@@ -33,7 +33,7 @@ function SectorPerformance() {
                     <div className="sector-box" key={sector.name}>
                         <h4>{sector.name}</h4>
 
-                        <p className={sector.positive ? "green" : "red"}>
+                        <p className={sector.change.startsWith("+") ? "sector-positive" : "sector-negative"}>
                             {sector.change}
                         </p>
                     </div>
