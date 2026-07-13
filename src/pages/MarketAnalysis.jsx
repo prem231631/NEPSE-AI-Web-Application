@@ -11,6 +11,7 @@ import RecentEvents from "../components/Market Analysis/RecentEvents";
 import MarketTable from "../components/Market Analysis/MarketTable";
 import "../styles/dashboard.css";
 import "../styles/Market Analysis/marketAnalysis.css";
+import Footer from "../components/Footer";
 
 function MarketAnalysis() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -67,6 +68,8 @@ function MarketAnalysis() {
 
             <MarketTable/>
           </div>
+
+          <Footer/>
         </div>
       </div>
     </div>

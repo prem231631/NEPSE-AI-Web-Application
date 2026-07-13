@@ -1,5 +1,5 @@
 .market-table{
-    margin-top:30px;
+    margin-top:5px;
     background:#141f3c;
     border:1px solid #273556;
     border-radius:18px;
@@ -53,12 +53,12 @@
     background:#1d2a4d;
 }
 
-.positive{
-    color:#39d98a;
-    font-weight:700;
+.market-table td.positive{
+    color:#37d67a;
+    font-size:18px;
 }
 
-.negative{
-    color:#ff5b5b;
-    font-weight:700;
+.market-table td.negative{
+    color:#ff6b6b;
+    font-size:18px;
 }
