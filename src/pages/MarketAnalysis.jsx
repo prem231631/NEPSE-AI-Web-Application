@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
-
+import api from "../services/api";
 import MarketHeader from "../components/Market Analysis/MarketHeader";
 import SectorPerformance from "../components/Market Analysis/SectorPerformance";
 import MarketHeatmap from "../components/Market Analysis/MarketHeatmap";

@@ -8,7 +8,7 @@ function LatestNews({ full = false }) {
 
     useEffect(() => {
 
-        fetch("http://127.0.0.1:8000/news")
+        fetch("http://127.0.0.1:8001/news")
             .then(res => res.json())
             .then(data => setNews(data));
 

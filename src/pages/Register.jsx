@@ -79,7 +79,7 @@ function Register() {
         <div className="register-page">
             {/* left section */}
             <div className="register-left">
-                <div classname="register-logo">
+                <div className="register-logo">
                     <div className="logo-box">
                         <HiOutlineCpuChip/>
                     </div>
