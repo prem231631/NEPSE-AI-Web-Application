@@ -46,3 +46,28 @@
     align-items: start;
 }
 
+.welcome-popup{
+    position:fixed;
+    top:30px;
+    right:30px;
+    width:320px;
+    background:#0f172a;
+    color:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    animation:slideIn .4s ease;
+    z-index:9999;
+}
+
+@keyframes slideIn{
+    from{
+        transform:translateX(100%);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}

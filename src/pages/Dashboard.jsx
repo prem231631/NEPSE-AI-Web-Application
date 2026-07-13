@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
 import SummaryCards from "../components/SummaryCards";
@@ -10,11 +10,43 @@ import LatestNews from "../components/LatestNews";
 import Footer from "../components/Footer";
 
 import "../styles/dashboard.css";
+import { useLocation } from "react-router-dom";
 function Dashboard(){
     const [sidebarOpen, setSidebarOpen]=useState(true);
 
+    const location = useLocation();
+    const [showPopup, setShowPopup] = useState(
+        location.state?.showWelcome || false
+    );
+
+    const user = location.state?.user;
+
+    useEffect(() => {
+
+        if(showPopup){
+
+            const timer = setTimeout(() => {
+
+                setShowPopup(false);
+
+            },5000);
+
+            return ()=>clearTimeout(timer);
+        }
+
+    },[showPopup]);
+
     return (
+     
         <div className="dashboard-layout">
+
+        {showPopup && (
+            <div className="welcome-popup">
+                <h3>Welcome, {user?.name}! 👋</h3>
+                <p>Successfully logged in to NEPSE AI.</p>
+            </div>
+        )}
+
             <Sidebar
                 sidebarOpen={sidebarOpen}
             />
@@ -34,7 +66,7 @@ function Dashboard(){
                 <div className="dashboard-grid2">
                     <TrendingStocks/>
 
-                    <div classname="dashboard-column">
+                    <div className="dashboard-column">
                         <WatchlistPreview/>
                         <LatestNews/>
                     </div>

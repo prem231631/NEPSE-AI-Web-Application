@@ -41,9 +41,18 @@ function Login() {
                 response.data.access_token
             );
 
-            alert("Login Successful!");
+            const user=await api.get("/me", {
+                headers: {
+                    Authorization: `Bearer ${response.data.access_token}`,
+                },
+            });
 
-            navigate("/marketAnalysis");
+            navigate("/dashboard", {
+                state: {
+                    user: user.data,
+                    showWelcome: true,
+                },
+            });
 
         } catch (err) {
 
@@ -68,6 +77,8 @@ function Login() {
         }
 
     };
+
+    
 
     return(
         <div className="login-page">
