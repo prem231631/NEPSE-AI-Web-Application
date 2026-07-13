@@ -6,6 +6,10 @@
     gap:20px;
 }
 
+.market-title{
+    display:grid;
+}
+
 .market-title h1{
     color:#ffffff;
     font-size:40px;
