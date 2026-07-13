@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 
-DATABASE_URL = "postgresql://postgres:admin123@localhost:5432/auth_db"  #database connection string for PostgreSQL database
+DATABASE_URL = "postgresql://postgres:12345678@localhost:5432/nepse_ai"  #database connection string for PostgreSQL database
 
 
 engine = create_engine(DATABASE_URL) #connection between Python and PostgreSQL.
