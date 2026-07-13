@@ -3,7 +3,6 @@ from login import get_current_user
 
 router = APIRouter()
 
-# ── Placeholder stock data — replace with DB query later ──
 fake_stock_data = {
     "NABIL": {
         "name": "Nabil Bank Limited",
@@ -32,15 +31,6 @@ fake_stock_data = {
             {"date": "2024-01-03", "open": 4900, "close": 4880, "high": 4930, "low": 4870, "volume": 1300},
         ]
     },
-    "EBL": {
-        "name": "Everest Bank Limited",
-        "sector": "Banking",
-        "history": [
-            {"date": "2024-01-01", "open": 2100, "close": 2150, "high": 2160, "low": 2090, "volume": 2200},
-            {"date": "2024-01-02", "open": 2150, "close": 2180, "high": 2200, "low": 2140, "volume": 2100},
-            {"date": "2024-01-03", "open": 2180, "close": 2160, "high": 2190, "low": 2150, "volume": 2300},
-        ]
-    },
     "MBL": {
         "name": "Machhapuchchhre Bank Limited",
         "sector": "Banking",
@@ -67,38 +57,10 @@ fake_stock_data = {
             {"date": "2024-01-02", "open": 290, "close": 285, "high": 292, "low": 282, "volume": 6800},
             {"date": "2024-01-03", "open": 285, "close": 295, "high": 298, "low": 283, "volume": 7300},
         ]
-    },
-    "NHPC": {
-        "name": "National Hydropower Company",
-        "sector": "Hydropower",
-        "history": [
-            {"date": "2024-01-01", "open": 520, "close": 530, "high": 535, "low": 518, "volume": 3100},
-            {"date": "2024-01-02", "open": 530, "close": 525, "high": 532, "low": 520, "volume": 2900},
-            {"date": "2024-01-03", "open": 525, "close": 540, "high": 545, "low": 522, "volume": 3300},
-        ]
-    },
-    "NLIC": {
-        "name": "National Life Insurance Company",
-        "sector": "Insurance",
-        "history": [
-            {"date": "2024-01-01", "open": 1100, "close": 1120, "high": 1130, "low": 1095, "volume": 1800},
-            {"date": "2024-01-02", "open": 1120, "close": 1115, "high": 1125, "low": 1110, "volume": 1600},
-            {"date": "2024-01-03", "open": 1115, "close": 1130, "high": 1140, "low": 1112, "volume": 1900},
-        ]
-    },
-    "SHIVM": {
-        "name": "Shiva Cement Limited",
-        "sector": "Manufacturing",
-        "history": [
-            {"date": "2024-01-01", "open": 180, "close": 185, "high": 188, "low": 178, "volume": 9100},
-            {"date": "2024-01-02", "open": 185, "close": 182, "high": 187, "low": 180, "volume": 8800},
-            {"date": "2024-01-03", "open": 182, "close": 190, "high": 192, "low": 180, "volume": 9300},
-        ]
     }
 }
 
 
-# ── Get all stocks ──
 @router.get("/stocks")
 def get_all_stocks(current_user=Depends(get_current_user)):
     return {
@@ -113,8 +75,6 @@ def get_all_stocks(current_user=Depends(get_current_user)):
         ]
     }
 
-
-# ── Get one stock ──
 @router.get("/stocks/{symbol}")
 def get_stock(symbol: str, current_user=Depends(get_current_user)):
     data = fake_stock_data.get(symbol.upper())
@@ -129,7 +89,6 @@ def get_stock(symbol: str, current_user=Depends(get_current_user)):
     }
 
 
-# ── Get latest price only ──
 @router.get("/stocks/{symbol}/price")
 def get_stock_price(symbol: str, current_user=Depends(get_current_user)):
     data = fake_stock_data.get(symbol.upper())
@@ -143,8 +102,6 @@ def get_stock_price(symbol: str, current_user=Depends(get_current_user)):
         "note": "Placeholder data — real scraper not connected yet"
     }
 
-
-# ── Get history only ──
 @router.get("/stocks/{symbol}/history")
 def get_stock_history(symbol: str, current_user=Depends(get_current_user)):
     data = fake_stock_data.get(symbol.upper())
