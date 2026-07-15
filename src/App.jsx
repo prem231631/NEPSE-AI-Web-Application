@@ -6,7 +6,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import News from "./pages/News";
 import MarketAnalysis from "./pages/MarketAnalysis";
-
+import Profile from "./pages/Profile";
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +17,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/news" element={<News/>}/>
         <Route path="/marketAnalysis" element={<MarketAnalysis/>}/>
+        <Route path="/profile" element = {<Profile/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function DashboardNavbar({setSidebarOpen}){
 
+    const navigate = useNavigate();
     const [search, setSearch] = useState("");
 
     const filteredStocks = stocks.filter((stock) =>
@@ -62,17 +63,15 @@ function DashboardNavbar({setSidebarOpen}){
                     className="profile-btn"
                     onClick={() => navigate("/profile")}
                 >
+                    <div className="profile-avatar">
+                        {userName.charAt(0).toUpperCase()}
+                    </div>
 
-                <div className="profile-avatar">
-                    {userName.charAt(0).toUpperCase()}
+                    <span className="profile-name">
+                        {userName}
+                    </span>
                 </div>
-
-                <span className="profile-name">
-                    {userName}
-                </span>
             </div>
-        </div>
-
         </header>
     );
 }

@@ -2,14 +2,19 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
-import api from "../api";
+import api from "../services/api";
 
 import "../styles/profile.css";
 
 function Profile() {
+
     const navigate = useNavigate();
 
     const [sidebarOpen, setSidebarOpen] = useState(true);
+
+    const [loading, setLoading] = useState(true);
+
+    const [editing, setEditing] = useState(false);
 
     const [user, setUser] = useState({
         name: "",
@@ -17,11 +22,14 @@ function Profile() {
         age: ""
     });
 
-    const [loading, setLoading] = useState(true);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        age: ""
+    });
 
     useEffect(() => {
         const token = localStorage.getItem("token");
-
         if (!token) {
             navigate("/login");
             return;
@@ -33,28 +41,108 @@ function Profile() {
             }
         })
         .then((res) => {
+
             setUser(res.data);
+
+            setFormData({
+                name: res.data.name,
+                email: res.data.email,
+                age: res.data.age
+            });
+
         })
         .catch(() => {
+
             localStorage.removeItem("token");
             navigate("/login");
+
         })
         .finally(() => {
+
             setLoading(false);
+
         });
 
-    }, []);
+    }, [navigate]);
+
+
+
+    const handleChange = (e) => {
+
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+
+    };
+
+
+
+    const handleCancel = () => {
+
+        setFormData({
+            name: user.name,
+            email: user.email,
+            age: user.age
+        });
+
+        setEditing(false);
+
+    };
+
+
+
+    const handleSave = async () => {
+        try {
+            const token = localStorage.getItem("token");
+
+            const res = await api.put(
+                "/profile",
+                {
+                    name: formData.name,
+                    age: Number(formData.age)
+                },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }
+            );
+
+            setUser(res.data);
+
+            setFormData({
+                name: res.data.name,
+                email: res.data.email,
+                age: res.data.age
+            });
+
+            setEditing(false);
+            alert("Profile updated successfully.");
+
+        } catch (err) {
+            console.log(err);
+            alert("Unable to update profile.");
+        }
+
+    };
+
+
 
     if (loading) {
-        return <h2 style={{color:"white"}}>Loading...</h2>;
+        return (
+            <h2 style={{ color: "white" }}>
+                Loading...
+            </h2>
+        );
     }
 
     return (
         <div className="dashboard-layout">
-            <Sidebar sidebarOpen={sidebarOpen}/>
+            <Sidebar sidebarOpen={sidebarOpen} />
 
             <div className={`dashboard-content ${sidebarOpen ? "sidebar-open" : ""}`}>
-                <DashboardNavbar setSidebarOpen={setSidebarOpen}/>
+                <DashboardNavbar setSidebarOpen={setSidebarOpen} />
 
                 <div className="profile-card">
                     <div className="profile-avatar">
@@ -68,8 +156,11 @@ function Profile() {
                             <label>Full Name</label>
 
                             <input
-                                value={user.name}
-                                readOnly
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                readOnly={!editing}
                             />
                         </div>
 
@@ -77,7 +168,8 @@ function Profile() {
                             <label>Email</label>
 
                             <input
-                                value={user.email}
+                                type="email"
+                                value={formData.email}
                                 readOnly
                             />
                         </div>
@@ -86,10 +178,40 @@ function Profile() {
                             <label>Age</label>
 
                             <input
-                                value={user.age}
-                                readOnly
+                                type="number"
+                                name="age"
+                                value={formData.age}
+                                onChange={handleChange}
+                                readOnly={!editing}
                             />
                         </div>
+                    </div>
+
+                    <div className="profile-buttons">
+                        {!editing ? (
+                            <button
+                                className="edit-btn"
+                                onClick={() => setEditing(true)}
+                            >
+                                Edit Profile
+                            </button>
+                        ) : (
+                            <>
+                                <button
+                                    className="save-btn"
+                                    onClick={handleSave}
+                                >
+                                    Save Changes
+                                </button>
+
+                                <button
+                                    className="cancel-btn"
+                                    onClick={handleCancel}
+                                >
+                                    Cancel
+                                </button>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

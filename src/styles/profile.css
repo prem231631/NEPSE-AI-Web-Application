@@ -52,3 +52,59 @@
     padding:14px;
     font-size:16px;
 }
+
+.profile-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn{
+
+    border:none;
+    border-radius:8px;
+    padding:12px 28px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.edit-btn{
+    background:#3b82f6;
+    color:white;
+}
+
+.edit-btn:hover{
+    background:#2563eb;
+}
+
+.save-btn{
+    background:#16a34a;
+    color:white;
+}
+
+.save-btn:hover{
+    background:#15803d;
+}
+
+.cancel-btn{
+    background:#ef4444;
+    color:white;
+}
+
+.cancel-btn:hover{
+    background:#dc2626;
+}
+
+.info-group input[readonly]{
+    cursor:default;
+    opacity:.9;
+}
+
+.info-group input:not([readonly]){
+    border:2px solid #3b82f6;
+}
