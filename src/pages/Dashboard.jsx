@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
 import SummaryCards from "../components/SummaryCards";
@@ -10,8 +11,10 @@ import LatestNews from "../components/LatestNews";
 import Footer from "../components/Footer";
 
 import "../styles/dashboard.css";
-import { useLocation } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 function Dashboard(){
+    const navigate = useNavigate();
+
     const [sidebarOpen, setSidebarOpen]=useState(true);
 
     const location = useLocation();
@@ -22,19 +25,21 @@ function Dashboard(){
     const user = location.state?.user;
 
     useEffect(() => {
-
         if(showPopup){
-
             const timer = setTimeout(() => {
-
                 setShowPopup(false);
-
             },5000);
 
             return ()=>clearTimeout(timer);
         }
-
     },[showPopup]);
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        if (!token) {
+            navigate("/login");
+        }
+    }, [navigate]);
 
     return (
      

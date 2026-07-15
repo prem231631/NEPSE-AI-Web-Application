@@ -1,8 +1,27 @@
 import { NavLink } from "react-router-dom";
 import "./../styles/sidebar.css";
 import {FiGrid, FiTrendingUp, FiCpu, FiStar, FiBell, FiSettings, FiLogOut} from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar({sidebarOpen}) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    const confirmLogout = window.confirm(
+      "Are you sure you want to logout?"
+    );
+
+    if(!confirmLogout){
+      return;
+    }
+
+    localStorage.removeItem("token");
+
+    localStorage.removeItem("theme");
+
+    navigate("/login");
+  };
+
   return (
     <aside className={`sidebar ${sidebarOpen ? "open" : "closed"}`}>
       <div className="sidebar-menu">
@@ -32,7 +51,7 @@ function Sidebar({sidebarOpen}) {
         </NavLink>
       </div>
 
-      <div className="sidebar-logout">
+      <div className="sidebar-logout" onClick={handleLogout}>
         <FiLogOut/>
         <span>Logout</span>
       </div>
