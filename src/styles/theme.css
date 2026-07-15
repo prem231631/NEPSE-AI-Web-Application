@@ -1,0 +1,143 @@
+/* ===========================
+   DARK THEME
+=========================== */
+
+body.dark{
+    --button-text: #ffffff;
+
+    --background:#07182c;
+
+    --navbar:#0d1733;
+
+    --sidebar:#08162b;
+
+    --card:#1c2854;
+
+    --secondary:#2b385f;
+
+    --hover:#33456d;
+
+    --input-bg:#24314f;
+
+    --border:#2e4f94;
+
+    /* Text */
+
+    --text-primary:#ffffff;
+
+    --text-secondary:#c7d4f1;
+
+    --text-muted:#9fb2d9;
+
+    --text-light:#7f96c3;
+
+    /* Brand */
+
+    --primary:#2563eb;
+
+    --primary-hover:#1d4ed8;
+
+    /* Status */
+
+    --success:#37d67a;
+
+    --danger:#ff6b6b;
+
+    --warning:#ffc857;
+
+    /* Shadows */
+
+    --shadow:rgba(0,0,0,.25);
+
+    --shadow-light:rgba(0,0,0,.15);
+
+    --overlay:rgba(0,0,0,.35);
+
+    background:var(--background);
+
+    color:var(--text-primary);
+
+    transition:.3s;
+
+    --success-bg:#22c55e;
+    --warning-bg:#f59e0b;
+    --danger-bg:#ef4444;
+
+}
+
+
+/* ===========================
+   LIGHT THEME
+=========================== */
+
+body.light{
+
+    background:
+    linear-gradient(
+        180deg,
+        #d8f3ff 0%,
+        #ffffff 20%,
+        #ffffff 80%,
+        #d8f3ff 100%
+    );
+
+    --button-text:#ffffff;
+
+    --background:#ffffff;
+
+    --navbar:#ffffff;
+
+    --sidebar:#f8fbff;
+
+    --card:#ffffff;
+
+    --secondary:#eef7ff;
+
+    --hover:#e7f3ff;
+
+    --input-bg:#f4f9ff;
+
+    --border:#d6e6fa;
+
+    /* Text */
+
+    --text-primary:#183153;
+
+    --text-secondary:#36567b;
+
+    --text-muted:#5d7695;
+
+    --text-light:#8296ad;
+
+    /* Brand */
+
+    --primary:#2563eb;
+
+    --primary-hover:#1d4ed8;
+
+    /* Status */
+
+    --success:#16a34a;
+
+    --danger:#dc2626;
+
+    --warning:#d97706;
+
+    /* Shadows */
+
+    --shadow:rgba(0,0,0,.25);
+
+    --shadow-light:rgba(0,0,0,.15);
+
+    --overlay:rgba(0,0,0,.35);
+
+    color:var(--text-primary);
+
+    transition:.3s;
+
+
+
+    --success-bg:#16a34a;
+    --warning-bg:#d97706;
+    --danger-bg:#dc2626;
+}

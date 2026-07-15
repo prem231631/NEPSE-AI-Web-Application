@@ -3,24 +3,29 @@
 }
 
 .settings-title{
-    color:white;
+    color:var(--text-primary);
     margin-bottom:30px;
     font-size:32px;
     font-weight:700;
-    text-align: left;
+    text-align:left;
 }
 
+/* ===========================
+   Common Card
+=========================== */
+
 .settings-card{
-    background:#07162e;
+    background:var(--card);
     border-radius:18px;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
     padding:30px;
     transition:.3s;
 }
 
 .settings-card:hover{
     transform:translateY(-4px);
-    border-color:#3b82f6;
+    border-color:var(--primary);
+    box-shadow:0 15px 35px var(--shadow);
 }
 
 .account-card{
@@ -30,6 +35,10 @@
     gap:40px;
 }
 
+/* ===========================
+   Layout
+=========================== */
+
 .settings-grid{
     margin-top:30px;
     display:grid;
@@ -38,13 +47,16 @@
 }
 
 .security-appearance{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    height: 100%;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    height:100%;
 }
 
-/* AccountSettings */
+/* ===========================
+   Account Section
+=========================== */
+
 .account-info{
     display:flex;
     align-items:center;
@@ -53,41 +65,41 @@
 }
 
 .account-details{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    text-align: left;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    flex:1;
+    text-align:left;
 }
 
 .account-avatar{
     width:90px;
     height:90px;
     border-radius:50%;
-    background:#2563eb;
+    background:var(--primary);
     display:flex;
     justify-content:center;
     align-items:center;
-    color:white;
+    color:var(--button-text);
     font-size:36px;
     font-weight:700;
 }
 
 .account-details h2{
-    color: white;
-    font-size: 28px;
-    margin: 0 0 8px;
+    color:var(--text-primary);
+    font-size:28px;
+    margin:0 0 8px;
 }
 
 .account-details p{
-    color: #9db3d9;
-    font-size: 16px;
-    margin: 0 0 8px;
+    color:var(--text-secondary);
+    font-size:16px;
+    margin:0 0 8px;
 }
 
 .account-details span{
-    color: #cdd7ec;
-    font-size: 15px;
+    color:var(--text-secondary);
+    font-size:15px;
 }
 
 .settings-btn{
@@ -98,8 +110,8 @@
     align-items:center;
     gap:10px;
     padding:0;
-    background:#2563eb;
-    color:white;
+    background:var(--primary);
+    color:var(--button-text);
     border:none;
     border-radius:12px;
     cursor:pointer;
@@ -109,22 +121,29 @@
 }
 
 .settings-btn:hover{
-    background:#1d4ed8;
+    background:var(--primary-hover);
 }
 
-/* Appearance Setting */
+/* ===========================
+   Section Header
+=========================== */
+
 .card-header{
     margin-bottom:25px;
 }
 
 .card-header h2{
-    color:white;
+    color:var(--text-primary);
     margin-bottom:8px;
 }
 
 .card-header p{
-    color:#9db3d9;
+    color:var(--text-secondary);
 }
+
+/* ===========================
+   Appearance
+=========================== */
 
 .theme-options{
     display:grid;
@@ -133,7 +152,7 @@
 }
 
 .theme-box{
-    background:#24314f;
+    background:var(--secondary);
     border:2px solid transparent;
     border-radius:16px;
     padding:25px;
@@ -144,31 +163,33 @@
 
 .theme-box:hover{
     transform:translateY(-4px);
-    border-color:#3b82f6;
+    border-color:var(--primary);
 }
 
 .active-theme{
-    border-color:#2563eb;
-    background:#1f3f73;
+    border-color:var(--primary);
+    background:rgba(59,130,246,.15);
 }
 
 .theme-icon{
     font-size:40px;
-    color:#3b82f6;
+    color:var(--primary);
     margin-bottom:15px;
 }
 
 .theme-box h3{
-    color:white;
+    color:var(--text-primary);
     margin-bottom:10px;
 }
 
 .theme-box span{
-    color:#9db3d9;
+    color:var(--text-secondary);
     font-size:14px;
 }
 
-/* Notification Settings */
+/* ===========================
+   Notifications
+=========================== */
 
 .notification-list{
     display:flex;
@@ -179,19 +200,25 @@
 .notification-item{
     display:flex;
     justify-content:space-between;
-    background:#24314f;
+    background:var(--secondary);
     padding:18px;
     border-radius:14px;
+    border:1px solid transparent;
+    transition:.25s;
+}
+
+.notification-item:hover{
+    border-color:var(--border);
 }
 
 .notification-item h4{
-    color:white;
+    color:var(--text-primary);
     margin-bottom:6px;
-    text-align: left;
+    text-align:left;
 }
 
 .notification-item span{
-    color:#9db3d9;
+    color:var(--text-secondary);
     font-size:14px;
     text-align:left;
 }
@@ -202,7 +229,10 @@
     cursor:pointer;
 }
 
-/* Security Settins */
+/* ===========================
+   Security
+=========================== */
+
 .security-card{
     grid-column:1 / -1;
 }
@@ -217,12 +247,18 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:#24314f;
+    background:var(--secondary);
     padding:20px;
     border-radius:14px;
+    border:1px solid transparent;
+    transition:.25s;
 }
 
-.security-item>div{
+.security-item:hover{
+    border-color:var(--border);
+}
+
+.security-item > div{
     display:flex;
     align-items:center;
     gap:18px;
@@ -230,16 +266,16 @@
 
 .security-icon{
     font-size:30px;
-    color:#3b82f6;
+    color:var(--primary);
 }
 
 .security-item h4{
-    color:white;
+    color:var(--text-primary);
     margin-bottom:6px;
 }
 
 .security-item span{
-    color:#9db3d9;
+    color:var(--text-secondary);
     font-size:14px;
 }
 
@@ -247,8 +283,9 @@
     padding:12px 20px;
     border:none;
     border-radius:10px;
-    background:#374151;
-    color:#bfc8d8;
+    background:var(--secondary);
+    color:var(--text-secondary);
     cursor:not-allowed;
     font-weight:600;
+    border:1px solid var(--border);
 }

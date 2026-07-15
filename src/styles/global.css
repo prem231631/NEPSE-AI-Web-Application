@@ -16,3 +16,25 @@ body{
     overflow-x:hidden;
     font-family:Arial, sans-serif;
 }
+
+body,
+.card,
+.settings-card,
+.watchlist-card,
+.ai-card,
+.market-card,
+.news-card,
+.sidebar,
+.dashboard-navbar,
+.footer,
+input,
+button,
+table,
+tr,
+td{
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}

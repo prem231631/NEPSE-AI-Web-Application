@@ -11,7 +11,6 @@ import Settings from "./pages/Settings";
 
 function App() {
   return (
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
@@ -21,9 +20,8 @@ function App() {
         <Route path="/marketAnalysis" element={<MarketAnalysis/>}/>
         <Route path="/profile" element = {<Profile/>}/>
         <Route path="/settings" element={<Settings/>}/>
-        
+
       </Routes>
-    </BrowserRouter>
   );
 }
 

@@ -1,16 +1,19 @@
 .sidebar{
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 260px;
-    height: calc(100vh - 70px);
-    background: #07162e;
-    border-right: 1px solid rgba(255,255,255,0.08);
-    display: flex;
-    flex-direction: column;
+    position:fixed;
+    top:70px;
+    left:0;
+    width:260px;
+    height:calc(100vh - 70px);
+
+    background:var(--sidebar);
+    border-right:1px solid var(--border);
+
+    display:flex;
+    flex-direction:column;
     justify-content:space-between;
-    padding: 25px 15px;
-    transition: transform .3s ease;
+
+    padding:25px 15px;
+    transition:transform .3s ease;
 }
 
 .sidebar.open{
@@ -21,56 +24,68 @@
     transform:translateX(-100%);
 }
 
-
 .sidebar-menu{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
 .sidebar-item{
     display:flex;
     align-items:center;
     gap:15px;
+
     padding:15px;
     border-radius:12px;
-    color:#d8e3ff;
+
+    color:var(--text-secondary);
+
     cursor:pointer;
-    transition:.2s;
+    transition:.25s;
+
     text-decoration:none;
 }
 
 .sidebar-item:hover{
-    background: rgba(255,255,255, -.08);
+    background:var(--secondary);
+    color:var(--text-primary);
 }
 
 .sidebar-item.active{
-    background: #1d2f59;
+    background:var(--primary);
+    color:var(--button-text);
 }
 
-.sidebar-item svg, .sidebar-logout svg{
-    font-size: 20px;
+.sidebar-item svg,
+.sidebar-logout svg{
+    font-size:20px;
 }
 
 .sidebar-logout{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    color: #ff9090;
-    cursor: pointer;
-    border-radius: 12px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:15px;
+
+    color:var(--danger);
+
+    cursor:pointer;
+    border-radius:12px;
+
+    transition:.25s;
 }
 
 .sidebar-logout:hover{
-    background: rgba(255,255,255, 0.08);
+    background:var(--secondary);
 }
 
 @keyframes slideIn{
     from{
-        transform: translateX(-100%);
+        transform:translateX(-100%);
     }
+
     to{
-        transform: translateX(0);
+        transform:translateX(0);
     }
 }

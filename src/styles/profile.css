@@ -1,18 +1,24 @@
 .profile-card{
-    background:#07162e;
+    background:var(--card);
     border-radius:18px;
     padding:40px;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
+    transition:.3s;
 }
 
-.profile-card, .password-card{
-    width: 650px;
-    margin: 30px auto;
+.profile-card:hover{
+    border-color:var(--primary);
+    box-shadow:0 15px 35px var(--shadow);
 }
 
+.profile-card,
+.password-card{
+    width:650px;
+    margin:30px auto;
+}
 
 .profile-card h2{
-    color:white;
+    color:var(--text-primary);
     text-align:center;
     margin-bottom:35px;
 }
@@ -29,19 +35,25 @@
 }
 
 .info-group label{
-    color:#b8c6e6;
+    color:var(--text-secondary);
     margin-bottom:8px;
-    margin-top: 8px;
-    text-align: left;
+    margin-top:8px;
+    text-align:left;
 }
 
 .info-group input{
-    background:#24314f;
-    color:white;
-    border:none;
+    background:var(--input-bg);
+    color:var(--text-primary);
+    border:1px solid var(--border);
     border-radius:10px;
     padding:14px;
     font-size:16px;
+    transition:.3s;
+}
+
+.info-group input:focus{
+    border-color:var(--primary);
+    outline:none;
 }
 
 .profile-buttons{
@@ -54,7 +66,6 @@
 .edit-btn,
 .save-btn,
 .cancel-btn{
-
     border:none;
     border-radius:8px;
     padding:12px 28px;
@@ -64,31 +75,37 @@
     transition:.3s;
 }
 
+/* Edit */
+
 .edit-btn{
-    background:#3b82f6;
-    color:white;
+    background:var(--primary);
+    color:var(--button-text);
 }
 
 .edit-btn:hover{
-    background:#2563eb;
+    background:var(--primary-hover);
 }
 
+/* Save */
+
 .save-btn{
-    background:#16a34a;
-    color:white;
+    background:var(--success);
+    color:var(--button-text);
 }
 
 .save-btn:hover{
-    background:#15803d;
+    filter:brightness(.9);
 }
 
+/* Cancel */
+
 .cancel-btn{
-    background:#ef4444;
-    color:white;
+    background:var(--danger);
+    color:var(--button-text);
 }
 
 .cancel-btn:hover{
-    background:#dc2626;
+    filter:brightness(.9);
 }
 
 .info-group input[readonly]{
@@ -97,21 +114,29 @@
 }
 
 .info-group input:not([readonly]){
-    border:2px solid #3b82f6;
+    border:2px solid var(--primary);
 }
 
-
+/* ==========================
+   Password Card
+========================== */
 
 .password-card{
     margin-top:30px;
-    background:#07162e;
-    border-radius:15px;
+    background:var(--card);
+    border-radius:18px;
     padding:30px;
-    border-top:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
+    transition:.3s;
+}
+
+.password-card:hover{
+    border-color:var(--primary);
+    box-shadow:0 15px 35px var(--shadow);
 }
 
 .password-card h2{
-    color:white;
+    color:var(--text-primary);
     margin-bottom:25px;
 }
 

@@ -1,14 +1,14 @@
 .watchlist-card{
-    background:#07162e;
+    background:var(--card);
     border-radius:20px;
     padding:30px;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
     transition:.3s;
 }
 
 .watchlist-card:hover{
-    border-color:#3b82f6;
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    border-color:var(--primary);
+    box-shadow:0 15px 35px var(--shadow);
 }
 
 .watchlist-header{
@@ -22,12 +22,12 @@
     display:flex;
     align-items:center;
     gap:10px;
-    color:white;
+    color:var(--text-primary);
 }
 
 .watchlist-header button{
-    background:#1d4ed8;
-    color:white;
+    background:var(--primary);
+    color:var(--button-text);
     border:none;
     padding:8px 18px;
     border-radius:10px;
@@ -36,7 +36,7 @@
 }
 
 .watchlist-header button:hover{
-    background:#2563eb;
+    background:var(--primary-hover);
 }
 
 .watch-item{
@@ -44,7 +44,7 @@
     justify-content:space-between;
     align-items:center;
     padding:18px 0;
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid var(--border);
 }
 
 .watch-item:last-child{
@@ -61,21 +61,21 @@
     width:45px;
     height:45px;
     border-radius:50%;
-    background:#3b82f6;
+    background:var(--primary);
     display:flex;
     justify-content:center;
     align-items:center;
-    color:white;
+    color:var(--button-text);
     font-weight:bold;
 }
 
 .watch-left h4{
-    color:white;
+    color:var(--text-primary);
     margin:0;
 }
 
 .watch-left small{
-    color:#9fb4e5;
+    color:var(--text-muted);
 }
 
 .watch-right{
@@ -85,25 +85,25 @@
 }
 
 .watch-right strong{
-    color:white;
+    color:var(--text-primary);
 }
 
 .watch-badge{
     padding:6px 12px;
     border-radius:20px;
-    color:white;
+    color:var(--button-text);
     font-size:12px;
     font-weight:600;
 }
 
 .watch-badge.buy{
-    background:#22c55e;
+    background:var(--success);
 }
 
 .watch-badge.hold{
-    background:#f59e0b;
+    background:var(--warning);
 }
 
 .watch-badge.sell{
-    background:#ef4444;
+    background:var(--danger);
 }

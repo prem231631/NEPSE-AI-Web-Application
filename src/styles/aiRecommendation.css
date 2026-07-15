@@ -1,13 +1,13 @@
 .ai-card{
-    background:#07162e;
+    background:var(--card);
     border-radius:20px;
     padding:30px;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
     transition:.3s;
 }
 
 .ai-card:hover{
-    border-color:#3b82f6;
+    border-color:var(--primary);
     box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
 
@@ -26,16 +26,16 @@
 
 .title svg{
     font-size:30px;
-    color:#3b82f6;
+    color:var(--primary);
 }
 
 .title h2{
-    color:white;
+    color:var(--text-primary);
 }
 
 .live-badge{
-    background:#22c55e;
-    color:white;
+    background:var(--secondary);
+    color:var(--text-primary);
     padding:8px 18px;
     border-radius:50px;
     font-size:13px;
@@ -52,15 +52,15 @@
     display:flex;
     justify-content:space-between;
     margin-bottom:18px;
-    color:white;
+    color:var(--text-primary);
 }
 
 .row span:first-child{
-    color:#9fb4e5;
+    color:var(--text-secondary);
 }
 
 .buy{
-    color:#22c55e;
+    color:var(--success);
     display:flex;
     align-items:center;
     gap:6px;
@@ -70,7 +70,7 @@
 .progress{
     width:100%;
     height:10px;
-    background:#1a2d55;
+    background:var(--input-bg);
     border-radius:20px;
     overflow:hidden;
     margin-bottom:22px;
@@ -78,15 +78,15 @@
 
 .progress-fill{
     height:100%;
-    background:#3b82f6;
+    background:var(--primary);
 }
 
 .positive{
-    color:#22c55e;
+    color:var(--success);
 }
 
 .ai-reason{
-    background:#0c1834;
+    background:var(--secondary);
     border-radius:16px;
     padding:25px;
 }
@@ -95,19 +95,19 @@
     display:flex;
     align-items:center;
     gap:10px;
-    color:white;
+    color:var(--text-primary);
     margin-bottom:18px;
     font-weight:600;
 }
 
 .ai-reason p{
-    color:#c7d4ef;
+    color:var(--text-secondary);
     line-height:1.8;
 }
 
 .ai-reason button{
     margin-top:25px;
-    background:#3b82f6;
+    background:var(--primary);
     color:white;
     border:none;
     padding:14px 22px;
@@ -120,6 +120,6 @@
 }
 
 .ai-reason button:hover{
-    background:#2563eb;
+    background:var(--primary-hover);
     transform:translateX(5px);
 }

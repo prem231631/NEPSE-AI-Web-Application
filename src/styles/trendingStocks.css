@@ -1,18 +1,18 @@
 .trending-card{
-    background:#07162e;
+    background:var(--card);
     border-radius:20px;
     padding:30px;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
     transition:.3s;
 }
 
 .trending-card:hover{
-    border-color:#3b82f6;
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    border-color:var(--primary);
+    box-shadow:0 15px 35px var(--shadow);
 }
 
 .trending-header h2{
-    color:white;
+    color:var(--text-primary);
     margin-bottom:25px;
 }
 
@@ -20,20 +20,21 @@
     margin-bottom:30px;
 }
 
-.gainer-title, .loser-title{
+.gainer-title,
+.loser-title{
     display:flex;
     align-items:center;
     gap:10px;
-    color:white;
     margin-bottom:15px;
+    font-weight:600;
 }
 
 .gainer-title{
-    color:#22c55e;
+    color:var(--success);
 }
 
 .loser-title{
-    color:#ef4444;
+    color:var(--danger);
 }
 
 .stock-row{
@@ -41,7 +42,7 @@
     justify-content:space-between;
     align-items:center;
     padding:15px 0;
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid var(--border);
 }
 
 .stock-row:last-child{
@@ -58,21 +59,21 @@
     width:45px;
     height:45px;
     border-radius:50%;
-    background:#1d4ed8;
+    background:var(--primary);
     display:flex;
     justify-content:center;
     align-items:center;
-    color:white;
+    color:var(--button-text);
     font-weight:bold;
 }
 
 .stock-info h4{
-    color:white;
+    color:var(--text-primary);
     margin:0;
 }
 
 .stock-info small{
-    color:#9fb4e5;
+    color:var(--text-secondary);
 }
 
 .stock-right{
@@ -82,16 +83,16 @@
 }
 
 .stock-price{
-    color:white;
+    color:var(--text-primary);
 }
 
 .positive{
-    color:#22c55e;
+    color:var(--success);
     font-weight:600;
 }
 
 .negative{
-    color:#ef4444;
+    color:var(--danger);
     font-weight:600;
 }
 
@@ -100,19 +101,17 @@
     border-radius:20px;
     font-size:12px;
     font-weight:600;
+    color:var(--button-text);
 }
 
 .badge.buy{
-    background:#22c55e;
-    color:white;
+    background:var(--success);
 }
 
 .badge.sell{
-    background:#ef4444;
-    color:white;
+    background:var(--danger);
 }
 
 .badge.hold{
-    background:#f59e0b;
-    color:white;
+    background:var(--warning);
 }

@@ -1,16 +1,17 @@
 .dashboard-layout{
-    display: flex;
+    display:flex;
 }
 
 .dashboard-content{
-    flex: 1;
-    margin-left: 0;
-    padding-top: 70px;   /* height of navbar */
-    transition: margin-left 0.3s ease;
+    flex:1;
+    margin-left:0;
+    padding-top:70px;
+    transition:margin-left .3s ease;
+    background:var(--background);
 }
 
 .dashboard-content.sidebar-open{
-    margin-left: 260px;
+    margin-left:260px;
 }
 
 .cards{
@@ -21,53 +22,75 @@
 }
 
 .card{
-    background:#0b2142;
+    background:var(--card);
     padding:25px;
     border-radius:15px;
+    border:1px solid var(--border);
+    transition:.3s;
+}
+
+.card:hover{
+    border-color:var(--primary);
 }
 
 .card h1{
     margin-top:10px;
     font-size:35px;
+    color:var(--text-primary);
 }
 
 .dashboard-grid1{
-    display: grid;
-    grid-template-columns: 1.2fr 1.5fr;
-    gap: 30px;
-    margin: 0 30px 30px;
+    display:grid;
+    grid-template-columns:1.2fr 1.5fr;
+    gap:30px;
+    margin:0 30px 30px;
 }
 
 .dashboard-grid2{
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 30px;
-    margin: 0 30px 30px;
-    align-items: start;
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:30px;
+    margin:0 30px 30px;
+    align-items:start;
 }
+
+/* Welcome Popup */
 
 .welcome-popup{
     position:fixed;
     top:30px;
     right:30px;
     width:320px;
-    background:#0f172a;
-    color:white;
+
+    background:var(--card);
+    color:var(--text-primary);
+
     padding:18px;
     border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    border:1px solid var(--border);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
+
     animation:slideIn .4s ease;
+
     z-index:9999;
 }
 
 @keyframes slideIn{
+
     from{
+
         transform:translateX(100%);
         opacity:0;
+
     }
 
     to{
+
         transform:translateX(0);
         opacity:1;
+
     }
+
 }

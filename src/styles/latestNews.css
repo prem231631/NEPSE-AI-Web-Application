@@ -1,9 +1,20 @@
 .latest-news{
 
-    background:#07162e;
+    background:var(--card);
     border-radius:18px;
     padding:25px;
     margin-top:25px;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+}
+
+.latest-news:hover{
+
+    border-color:var(--primary);
+
+    box-shadow:0 15px 35px var(--shadow);
 }
 
 .news-header{
@@ -16,13 +27,13 @@
 
 .news-header h2{
 
-    color:white;
+    color:var(--text-primary);
 }
 
 .show-more{
 
-    background:#1d4ed8;
-    color:white;
+    background:var(--primary);
+    color:var(--button-text);
     border:none;
     padding:8px 18px;
     border-radius:10px;
@@ -31,44 +42,47 @@
 }
 
 .show-more:hover{
-    background:#2563eb;
+
+    background:var(--primary-hover);
 }
 
 .news-card{
 
-    border-left:4px solid #4c7cff;
+    border-left:4px solid var(--primary);
     padding-left:15px;
     margin-bottom:25px;
 }
 
 .news-time{
 
-    color:#8ca2c9;
+    color:var(--text-muted);
     font-size:13px;
     margin-bottom:8px;
 }
 
 .news-card h3{
 
-    color:white;
+    color:var(--text-primary);
     margin-bottom:10px;
     font-size:20px;
 }
 
 .news-card p{
 
-    color:#c3d1ec;
+    color:var(--text-secondary);
     line-height:1.6;
 }
 
 .news-link{
-    color:#ffffff;
+
+    color:var(--text-primary);
     text-decoration:none;
     transition:.25s;
     font-weight:600;
 }
 
 .news-link:hover{
-    color:#4f8cff;
+
+    color:var(--primary);
     text-decoration:underline;
 }

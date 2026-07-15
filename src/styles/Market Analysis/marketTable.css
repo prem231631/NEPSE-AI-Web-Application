@@ -1,7 +1,7 @@
 .market-table{
     margin-top:5px;
-    background:#07162e;
-    border:1px solid #273556;
+    background:var(--card);
+    border:1px solid var(--border);
     border-radius:18px;
     overflow:hidden;
 }
@@ -10,13 +10,13 @@
     display:flex;
     gap:40px;
     padding:22px 28px;
-    border-bottom:1px solid #273556;
+    border-bottom:1px solid var(--border);
 }
 
 .table-tabs button{
     background:none;
     border:none;
-    color:#9ca3af;
+    color:var(--text-secondary);
     font-size:17px;
     font-weight:600;
     cursor:pointer;
@@ -24,9 +24,13 @@
     transition:.3s;
 }
 
+.table-tabs button:hover{
+    color:var(--primary);
+}
+
 .table-tabs button.active{
-    color:white;
-    border-bottom:3px solid #5B8CFF;
+    color:var(--text-primary);
+    border-bottom:3px solid var(--primary);
 }
 
 .market-table table{
@@ -37,7 +41,7 @@
 .market-table th{
     text-align:left;
     padding:18px 24px;
-    color:#8fa3bf;
+    color:var(--text-secondary);
     font-size:13px;
     letter-spacing:1px;
     text-transform:uppercase;
@@ -45,20 +49,26 @@
 
 .market-table td{
     padding:18px 24px;
-    color:white;
-    border-top:1px solid #243354;
+    color:var(--text-primary);
+    border-top:1px solid var(--border);
+}
+
+.market-table tr{
+    transition:.25s;
 }
 
 .market-table tr:hover{
-    background:#1d2a4d;
+    background:var(--secondary);
 }
 
 .market-table td.positive{
-    color:#37d67a;
+    color:var(--success);
     font-size:18px;
+    font-weight:600;
 }
 
 .market-table td.negative{
-    color:#ff6b6b;
+    color:var(--danger);
     font-size:18px;
+    font-weight:600;
 }

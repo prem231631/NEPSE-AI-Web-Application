@@ -11,13 +11,13 @@
 }
 
 .market-title h1{
-    color:#ffffff;
+    color:var(--text-primary);
     font-size:40px;
     margin-bottom:12px;
 }
 
 .market-title p{
-    color:#9ca7c2;
+    color:var(--text-secondary);
     font-size:17px;
 }
 
@@ -27,15 +27,21 @@
 }
 
 .index-card{
-    background:#07162e;
-    border:1px solid rgba(255,255,255,.08);
+    background:var(--card);
+    border:1px solid var(--border);
     border-radius:14px;
     padding:16px 24px;
     min-width:260px;
+    transition:.3s;
+}
+
+.index-card:hover{
+    border-color:var(--primary);
+    box-shadow:0 10px 25px var(--shadow-light);
 }
 
 .index-card span{
-    color:#9ca7c2;
+    color:var(--text-secondary);
     font-size:13px;
     letter-spacing:1px;
 }
@@ -47,11 +53,11 @@
     margin-top:10px;
     font-size:38px;
     font-weight:700;
-    color:white;
+    color:var(--text-primary);
 }
 
 .index-value small{
-    color:#33d17a;
+    color:var(--success);
     font-size:22px;
 }
 
@@ -66,7 +72,13 @@
 }
 
 .market-status.open{
-    background:#14382d;
-    color:#4ef0a2;
-    border:1px solid #1c7050;
+    background:rgba(34,197,94,.12);
+    color:var(--success);
+    border:1px solid rgba(34,197,94,.35);
+}
+
+.market-status.closed{
+    background:rgba(239,68,68,.12);
+    color:var(--danger);
+    border:1px solid rgba(239,68,68,.35);
 }

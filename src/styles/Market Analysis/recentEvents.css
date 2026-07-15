@@ -1,9 +1,15 @@
 .market-events{
-    background:#07162e;
+    background:var(--card);
     border-radius:18px;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
     padding:22px;
     height:100%;
+    transition:.3s;
+}
+
+.market-events:hover{
+    border-color:var(--primary);
+    box-shadow:0 12px 30px var(--shadow-light);
 }
 
 .events-header{
@@ -11,7 +17,7 @@
 }
 
 .events-header h2{
-    color:white;
+    color:var(--text-primary);
     font-size:24px;
 }
 
@@ -22,35 +28,35 @@
 }
 
 .event-card{
-    background:#223356;
+    background:var(--secondary);
     border-radius:12px;
     padding:16px;
     text-decoration:none;
     transition:.25s;
-    border-left:4px solid #2f8cff;
+    border-left:4px solid var(--primary);
 }
 
 .event-card:hover{
     transform:translateY(-3px);
-    background:#2b3f66;
+    background:var(--background);
 }
 
 .event-category{
     font-size:12px;
     font-weight:700;
-    color:#56b6ff;
+    color:var(--primary);
     letter-spacing:1px;
 }
 
 .event-card h4{
-    color:white;
+    color:var(--text-primary);
     margin:10px 0;
     font-size:17px;
     line-height:1.4;
 }
 
 .event-card p{
-    color:#b4c3e0;
+    color:var(--text-secondary);
     font-size:14px;
     line-height:1.5;
 
@@ -65,10 +71,11 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    color:#91a4ca;
+    color:var(--text-secondary);
     font-size:13px;
 }
 
 .event-footer svg{
     font-size:18px;
+    color:var(--primary);
 }
