@@ -4,6 +4,7 @@ import DashboardNavbar from "../components/DashboardNavbar";
 import AccountSettings from "../components/Settings/AccountSettings";
 import api from "../services/api";
 import AppearanceSettings from "../components/Settings/AppearanceSettings";
+import NotificationSettings from "../components/Settings/NotificationSettings";
 
 import "../styles/settings.css";
 
@@ -52,6 +53,7 @@ function Settings() {
 
                     <div className="settings-grid">
                         <AppearanceSettings/>
+                        <NotificationSettings/>
                     </div>
                 </div>
             </div>

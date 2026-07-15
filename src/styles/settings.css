@@ -32,7 +32,7 @@
 .settings-grid{
     margin-top:30px;
     display:grid;
-    grid-template-columns:1fr;
+    grid-template-columns:1fr 1fr;
     gap:25px;
 }
 
@@ -157,5 +157,38 @@
 .theme-box span{
     color:#9db3d9;
     font-size:14px;
+}
+
+/* Notification Settings */
+
+.notification-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.notification-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#24314f;
+    padding:18px;
+    border-radius:14px;
+}
+
+.notification-item h4{
+    color:white;
+    margin-bottom:6px;
+}
+
+.notification-item span{
+    color:#9db3d9;
+    font-size:14px;
+}
+
+.notification-item input{
+    width:20px;
+    height:20px;
+    cursor:pointer;
 }
 
