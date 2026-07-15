@@ -57,7 +57,7 @@ function DashboardNavbar({setSidebarOpen}){
             <div className="dashboard-right">
                 <FiBell className="nav-icon" />
 
-                <FiSettings className="nav-icon" />
+                <FiSettings className="nav-icon" onClick={() => navigate("/settings")} />
 
                 <div
                     className="profile-btn"
