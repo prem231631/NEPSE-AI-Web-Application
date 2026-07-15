@@ -51,10 +51,25 @@ function DashboardNavbar({setSidebarOpen}){
             </div>
 
             <div className="dashboard-right">
-                <FiBell/>
-                <FiSettings/>
-                <FiUser/>
+                <FiBell className="nav-icon" />
+
+                <FiSettings className="nav-icon" />
+
+                <div
+                    className="profile-btn"
+                    onClick={() => navigate("/profile")}
+                >
+
+                <div className="profile-avatar">
+                    {userName.charAt(0).toUpperCase()}
+                </div>
+
+                <span className="profile-name">
+                    {userName}
+                </span>
             </div>
+        </div>
+        
         </header>
     );
 }
