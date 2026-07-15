@@ -1,99 +1,81 @@
-.settings-container{
-    max-width:900px;
-    margin:40px auto;
-    padding:10px;
+.settings-page{
+    padding:30px;
 }
 
-.settings-container h1{
+.settings-title{
     color:white;
     margin-bottom:30px;
+    font-size:32px;
+    font-weight:700;
 }
 
 .settings-card{
     background:#182449;
-    border-radius:16px;
-    padding:25px;
-    margin-bottom:25px;
+    border-radius:18px;
     border:1px solid rgba(255,255,255,.08);
+    padding:30px;
+    transition:.3s;
 }
 
-.settings-card h2{
-    color:white;
-    margin-bottom:25px;
+.settings-card:hover{
+    transform:translateY(-4px);
+    border-color:#3b82f6;
 }
 
-.setting-row{
+.account-card{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:20px;
 }
 
-.setting-row h4{
+.account-info{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.account-avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     color:white;
-    margin-bottom:4px;
+    font-size:36px;
+    font-weight:700;
 }
 
-.setting-row p{
-    color:#9aa9c9;
-    font-size:14px;
+.account-details h2{
+    color:white;
+    margin-bottom:8px;
+}
+
+.account-details p{
+    color:#9db3d9;
+    margin-bottom:8px;
+}
+
+.account-details span{
+    color:#cdd7ec;
 }
 
 .settings-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 22px;
     background:#2563eb;
     color:white;
     border:none;
-    padding:12px 25px;
     border-radius:10px;
     cursor:pointer;
     font-size:15px;
+    font-weight:600;
     transition:.3s;
 }
 
 .settings-btn:hover{
     background:#1d4ed8;
-}
-
-/* Toggle Switch */
-
-.switch{
-    position:relative;
-    width:55px;
-    height:28px;
-}
-
-.switch input{
-    display:none;
-}
-
-.slider{
-    position:absolute;
-    cursor:pointer;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:#555;
-    transition:.3s;
-    border-radius:30px;
-}
-
-.slider::before{
-    content:"";
-    position:absolute;
-    width:22px;
-    height:22px;
-    left:3px;
-    top:3px;
-    background:white;
-    border-radius:50%;
-    transition:.3s;
-}
-
-.switch input:checked + .slider{
-    background:#3b82f6;
-}
-
-.switch input:checked + .slider::before{
-    transform:translateX(27px);
 }
