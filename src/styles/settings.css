@@ -29,6 +29,14 @@
     gap:40px;
 }
 
+.settings-grid{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+/* AccountSettings */
 .account-info{
     display:flex;
     align-items:center;
@@ -94,3 +102,60 @@
 .settings-btn:hover{
     background:#1d4ed8;
 }
+
+/* Appearance Setting */
+.card-header{
+    margin-bottom:25px;
+}
+
+.card-header h2{
+    color:white;
+    margin-bottom:8px;
+}
+
+.card-header p{
+    color:#9db3d9;
+}
+
+.theme-options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.theme-box{
+    background:#24314f;
+    border:2px solid transparent;
+    border-radius:16px;
+    padding:25px;
+    cursor:pointer;
+    transition:.3s;
+    text-align:center;
+}
+
+.theme-box:hover{
+    transform:translateY(-4px);
+    border-color:#3b82f6;
+}
+
+.active-theme{
+    border-color:#2563eb;
+    background:#1f3f73;
+}
+
+.theme-icon{
+    font-size:40px;
+    color:#3b82f6;
+    margin-bottom:15px;
+}
+
+.theme-box h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+.theme-box span{
+    color:#9db3d9;
+    font-size:14px;
+}
+

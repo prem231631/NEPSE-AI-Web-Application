@@ -1,6 +1,5 @@
 import { FiUser } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-
 function AccountSettings({ user }) {
 
     const navigate = useNavigate();

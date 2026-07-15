@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
 import AccountSettings from "../components/Settings/AccountSettings";
 import api from "../services/api";
+import AppearanceSettings from "../components/Settings/AppearanceSettings";
 
 import "../styles/settings.css";
 
@@ -48,6 +49,10 @@ function Settings() {
                     </h1>
 
                     <AccountSettings user={user}/>
+
+                    <div className="settings-grid">
+                        <AppearanceSettings/>
+                    </div>
                 </div>
             </div>
         </div>
