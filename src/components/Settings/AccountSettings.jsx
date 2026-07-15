@@ -7,12 +7,12 @@ function AccountSettings({ user }) {
 
     return (
         <div className="settings-card account-card">
-            <div className="account-left">
+            <div className="account-info">
                 <div className="account-avatar">
                     {user.name.charAt(0).toUpperCase()}
                 </div>
 
-                <div>
+                <div className="account-details">
                     <h2>{user.name}</h2>
 
                     <p>{user.email}</p>
