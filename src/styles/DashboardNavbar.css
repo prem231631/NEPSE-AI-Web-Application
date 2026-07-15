@@ -113,3 +113,42 @@
     color: white;
     cursor: pointer;
 }
+
+.profile-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    padding:6px 12px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.profile-btn:hover{
+    background:#24314f;
+}
+
+.profile-avatar{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#2f80ed;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.profile-name{
+    color:white;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-icon{
+    font-size:22px;
+    color:white;
+    cursor:pointer;
+}
