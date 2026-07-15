@@ -13,6 +13,10 @@ class UserLogin(BaseModel):
     email: EmailStr
     password: str
 
+class UpdateProfile(BaseModel):
+    name: str
+    age: int
+
 def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(security),
     db: Session = Depends(get_db)
@@ -61,3 +65,21 @@ def get_me(current_user = Depends(get_current_user)):
         "email": current_user.email,
         "age": current_user.age
 }
+
+@router.put("/profile")
+def update_profile(
+    profile: UpdateProfile,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    current_user.name = profile.name
+    current_user.age = profile.age
+
+    db.commit()
+    db.refresh(current_user)
+
+    return {
+        "name": current_user.name,
+        "email": current_user.email,
+        "age": current_user.age
+    }
