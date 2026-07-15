@@ -5,6 +5,7 @@ import AccountSettings from "../components/Settings/AccountSettings";
 import api from "../services/api";
 import AppearanceSettings from "../components/Settings/AppearanceSettings";
 import NotificationSettings from "../components/Settings/NotificationSettings";
+import SecuritySettings from "../components/Settings/SecuritySettings";
 
 import "../styles/settings.css";
 
@@ -52,8 +53,12 @@ function Settings() {
                     <AccountSettings user={user}/>
 
                     <div className="settings-grid">
-                        <AppearanceSettings/>
+                        <div className="security-appearance">
+                            <AppearanceSettings/>
+                            <SecuritySettings/>
+                        </div>
                         <NotificationSettings/>
+                        
                     </div>
                 </div>
             </div>

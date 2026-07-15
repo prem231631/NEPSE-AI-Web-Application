@@ -7,10 +7,11 @@
     margin-bottom:30px;
     font-size:32px;
     font-weight:700;
+    text-align: left;
 }
 
 .settings-card{
-    background:#182449;
+    background:#07162e;
     border-radius:18px;
     border:1px solid rgba(255,255,255,.08);
     padding:30px;
@@ -36,6 +37,13 @@
     gap:25px;
 }
 
+.security-appearance{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+}
+
 /* AccountSettings */
 .account-info{
     display:flex;
@@ -49,6 +57,7 @@
     flex-direction: column;
     justify-content: center;
     flex: 1;
+    text-align: left;
 }
 
 .account-avatar{
@@ -164,13 +173,12 @@
 .notification-list{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:16px;
 }
 
 .notification-item{
     display:flex;
     justify-content:space-between;
-    align-items:center;
     background:#24314f;
     padding:18px;
     border-radius:14px;
@@ -179,11 +187,13 @@
 .notification-item h4{
     color:white;
     margin-bottom:6px;
+    text-align: left;
 }
 
 .notification-item span{
     color:#9db3d9;
     font-size:14px;
+    text-align:left;
 }
 
 .notification-item input{
@@ -192,3 +202,53 @@
     cursor:pointer;
 }
 
+/* Security Settins */
+.security-card{
+    grid-column:1 / -1;
+}
+
+.security-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.security-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#24314f;
+    padding:20px;
+    border-radius:14px;
+}
+
+.security-item>div{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.security-icon{
+    font-size:30px;
+    color:#3b82f6;
+}
+
+.security-item h4{
+    color:white;
+    margin-bottom:6px;
+}
+
+.security-item span{
+    color:#9db3d9;
+    font-size:14px;
+}
+
+.disabled-btn{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#374151;
+    color:#bfc8d8;
+    cursor:not-allowed;
+    font-weight:600;
+}
