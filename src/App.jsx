@@ -7,6 +7,8 @@ import Dashboard from "./pages/Dashboard";
 import News from "./pages/News";
 import MarketAnalysis from "./pages/MarketAnalysis";
 import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +20,8 @@ function App() {
         <Route path="/news" element={<News/>}/>
         <Route path="/marketAnalysis" element={<MarketAnalysis/>}/>
         <Route path="/profile" element = {<Profile/>}/>
+        <Route path="/settings" element={<Settings/>}/>
+        
       </Routes>
     </BrowserRouter>
   );
