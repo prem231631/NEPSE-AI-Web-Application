@@ -28,6 +28,52 @@ function Profile() {
         age: ""
     });
 
+    const [passwordData, setPasswordData] = useState({
+        current_password: "",
+        new_password: "",
+        confirm_password: ""
+    });
+
+    const handlePasswordChange = (e) => {
+
+        setPasswordData({
+            ...passwordData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleChangePassword = async () => {
+        if(passwordData.new_password !== passwordData.confirm_password){
+            alert("Passwords do not match.");
+            return;
+        }
+
+        try{
+            const token = localStorage.getItem("token");
+
+            const res = await api.put(
+                "/change-password",
+                passwordData,
+                {
+                    headers:{
+                        Authorization:`Bearer ${token}`
+                    }
+                }
+            );
+
+        alert(res.data.message);
+
+        setPasswordData({
+            current_password:"",
+            new_password:"",
+            confirm_password:""
+        });
+
+        }catch(err){
+            alert(err.response?.data?.detail || "Unable to change password.");
+        }
+    };
+
     useEffect(() => {
         const token = localStorage.getItem("token");
         if (!token) {
@@ -212,6 +258,52 @@ function Profile() {
                                 </button>
                             </>
                         )}
+                    </div>
+                </div>
+
+                <div className="password-card">
+                    <h2>Change Password</h2>
+
+                    <div className="info-group">
+                        <label>Current Password</label>
+
+                        <input
+                            type="password"
+                            name="current_password"
+                            value={passwordData.current_password}
+                            onChange={handlePasswordChange}
+                        />
+                    </div>
+
+                    <div className="info-group">
+                        <label>New Password</label>
+
+                        <input
+                            type="password"
+                            name="new_password"
+                            value={passwordData.new_password}
+                            onChange={handlePasswordChange}
+                        />
+                    </div>
+
+                    <div className="info-group">
+                        <label>Confirm Password</label>
+
+                        <input
+                            type="password"
+                            name="confirm_password"
+                            value={passwordData.confirm_password}
+                            onChange={handlePasswordChange}
+                        />
+                    </div>
+
+                    <div className="password-btn">
+                        <button
+                            className="save-btn"
+                            onClick={handleChangePassword}
+                        >
+                            Change Password
+                        </button>    
                     </div>
                 </div>
             </div>

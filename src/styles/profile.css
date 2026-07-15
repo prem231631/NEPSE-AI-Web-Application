@@ -1,26 +1,15 @@
 .profile-card{
-    max-width:700px;
-    margin:40px auto;
     background:#182449;
     border-radius:18px;
     padding:40px;
     border:1px solid rgba(255,255,255,.08);
 }
 
-.profile-avatar{
-    width:90px;
-    height:90px;
-    margin:auto;
-    margin-bottom:25px;
-    border-radius:50%;
-    background:#2f80ed;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:38px;
-    font-weight:bold;
-    color:white;
+.profile-card, .password-card{
+    width: 650px;
+    margin: 30px auto;
 }
+
 
 .profile-card h2{
     color:white;
@@ -57,7 +46,7 @@
     display:flex;
     justify-content:center;
     gap:15px;
-    margin-top:30px;
+    margin-top:25px;
 }
 
 .edit-btn,
@@ -107,4 +96,25 @@
 
 .info-group input:not([readonly]){
     border:2px solid #3b82f6;
+}
+
+
+
+.password-card{
+    margin-top:30px;
+    background:#182449;
+    border-radius:15px;
+    padding:30px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.password-card h2{
+    color:white;
+    margin-bottom:25px;
+}
+
+.password-btn{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
 }
