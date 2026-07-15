@@ -1,5 +1,5 @@
 .profile-card{
-    background:#182449;
+    background:#07162e;
     border-radius:18px;
     padding:40px;
     border:1px solid rgba(255,255,255,.08);
@@ -31,6 +31,8 @@
 .info-group label{
     color:#b8c6e6;
     margin-bottom:8px;
+    margin-top: 8px;
+    text-align: left;
 }
 
 .info-group input{
@@ -102,7 +104,7 @@
 
 .password-card{
     margin-top:30px;
-    background:#182449;
+    background:#07162e;
     border-radius:15px;
     padding:30px;
     border-top:1px solid rgba(255,255,255,.08);
