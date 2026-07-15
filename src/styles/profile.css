@@ -1,0 +1,54 @@
+.profile-card{
+    max-width:700px;
+    margin:40px auto;
+    background:#182449;
+    border-radius:18px;
+    padding:40px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.profile-avatar{
+    width:90px;
+    height:90px;
+    margin:auto;
+    margin-bottom:25px;
+    border-radius:50%;
+    background:#2f80ed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
+    font-weight:bold;
+    color:white;
+}
+
+.profile-card h2{
+    color:white;
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.profile-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.info-group label{
+    color:#b8c6e6;
+    margin-bottom:8px;
+}
+
+.info-group input{
+    background:#24314f;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:14px;
+    font-size:16px;
+}
