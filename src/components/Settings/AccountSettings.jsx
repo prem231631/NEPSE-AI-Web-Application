@@ -9,7 +9,7 @@ function AccountSettings({ user }) {
         <div className="settings-card account-card">
             <div className="account-info">
                 <div className="account-avatar">
-                    {user.name.charAt(0).toUpperCase()}
+                    {user.name ? user.name.charAt(0).toUpperCase() : "U"}
                 </div>
 
                 <div className="account-details">

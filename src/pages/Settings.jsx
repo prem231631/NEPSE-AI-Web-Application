@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import DashboardNavbar from "../components/DashboardNavbar";
-import AccountSettings from "../components/AccountSettings";
+import AccountSettings from "../components/Settings/AccountSettings";
 import api from "../services/api";
 
 import "../styles/settings.css";
