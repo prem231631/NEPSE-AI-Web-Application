@@ -1,7 +1,8 @@
-import {FiMenu, FiBell, FiUser, FiSettings, FiSearch} from "react-icons/fi";
+import {FiMenu, FiBell, FiSettings, FiSearch} from "react-icons/fi";
 import "../styles/dashboardNavbar.css";
 import stocks from "../data/stocks";
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 function DashboardNavbar({setSidebarOpen}){
 
@@ -11,6 +12,8 @@ function DashboardNavbar({setSidebarOpen}){
         stock.symbol.toLowerCase().includes(search.toLowerCase()) ||
         stock.name.toLowerCase().includes(search.toLowerCase())
     );
+
+    const userName = localStorage.getItem("userName") || "User";
 
     return(
         <header className="dashboard-navbar">
@@ -69,7 +72,7 @@ function DashboardNavbar({setSidebarOpen}){
                 </span>
             </div>
         </div>
-        
+
         </header>
     );
 }

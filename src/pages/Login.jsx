@@ -47,6 +47,8 @@ function Login() {
                 },
             });
 
+            localStorage.setItem("userName", user.data.name);
+
             navigate("/dashboard", {
                 state: {
                     user: user.data,
