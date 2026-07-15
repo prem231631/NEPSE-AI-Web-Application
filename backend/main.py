@@ -5,6 +5,7 @@ from login import router as login_router
 from stocks import router as stocks_router
 from watchlist import router as watchlist_router
 from database import Base, engine
+from news import router as news_router
 import models
 
 app = FastAPI()
@@ -24,3 +25,4 @@ app.include_router(signup_router)
 app.include_router(login_router)
 app.include_router(stocks_router)
 app.include_router(watchlist_router)
+app.include_router(news_router)

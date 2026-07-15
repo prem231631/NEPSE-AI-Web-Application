@@ -38,12 +38,6 @@ temp_Db = {}
 @router.post("/signup")
 def Create_User(Userdata: User_SignUp, db: Session = Depends(get_db)):
 
-    if Userdata.age < 18:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="You must be 18 or older to register."
-        )
-
     existing_user = db.query(User).filter(User.email == Userdata.email).first()
 
     if existing_user:

@@ -62,15 +62,19 @@ function Register() {
 
             navigate("/login");
 
-        }catch(err){
+        }catch (err) {
+    console.log(err.response?.data);
 
-            if(err.response){
-                setError(err.response.data.detail);
-            }else{
-                setError("Unable to connect to server.");
-            }
-
-        }finally{
+    if (err.response) {
+        if (Array.isArray(err.response.data.detail)) {
+            setError(err.response.data.detail[0].msg);
+        } else {
+            setError(err.response.data.detail);
+        }
+    } else {
+        setError("Unable to connect to server.");
+    }
+    }finally{
             setLoading(false);
         }
     };
