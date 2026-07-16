@@ -37,8 +37,15 @@ function DashboardNavbar({setSidebarOpen}){
                 {search && (
                     <div className="search-dropdown">
                         {filteredStocks.length > 0 ? (
-                            filteredStocks.map((stock, index) => (
-                                <div className="search-item" key={index}>
+                            filteredStocks.map((stock) => (
+                                <div
+                                    className="search-item"
+                                    key={stock.symbol}
+                                    onClick={() => {
+                                        navigate(`/stock/${stock.symbol}`);
+                                        setSearch("");
+                                    }}
+                                >
                                     <strong>{stock.symbol}</strong>
 
                                     <span>{stock.name}</span>
