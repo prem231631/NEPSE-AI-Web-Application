@@ -1,10 +1,13 @@
 .features-section{
     width:100%;
     padding:100px 120px;
-    background:#021224;
-    color:white;
-    margin-top: 80px;
+    background:var(--background);
+    color:var(--text);
+    margin-top:80px;
+    transition:.3s;
 }
+
+/* Header */
 
 .features-header{
     text-align:center;
@@ -14,13 +17,15 @@
 .features-header h2{
     font-size:42px;
     margin-bottom:15px;
-    color:#dfe9ff;
+    color:var(--text);
 }
 
 .features-header p{
-    color:#8894b3;
+    color:var(--text2);
     font-size:18px;
 }
+
+/* Grid */
 
 .feature-grid{
     display:grid;
@@ -28,24 +33,29 @@
     gap:30px;
 }
 
+/* Card */
+
 .feature-card{
-    background:#07182e;
-    border:1px solid rgba(255,255,255,0.08);
+    background:var(--card);
+    border:1px solid var(--border);
     border-radius:20px;
     padding:35px;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .feature-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 30px rgba(76,120,255,0.2);
+    border-color:var(--primary);
+    box-shadow:0 0 30px var(--shadow-light);
 }
+
+/* Icon */
 
 .feature-icon{
     width:60px;
     height:60px;
     border-radius:15px;
-    background:#263a72;
+    background:var(--secondary);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -54,21 +64,25 @@
     margin-bottom:25px;
 }
 
+/* Different Feature Colors */
+
 .green{
     background:#0f4a42;
 }
 
 .blue{
-    background:#2c4278;
+    background:var(--primary);
 }
+
+/* Text */
 
 .feature-card h3{
     font-size:28px;
     margin-bottom:20px;
-    color:#dfe9ff;
+    color:var(--text);
 }
 
 .feature-card p{
-    color:#8894b3;
+    color:var(--text2);
     line-height:1.7;
 }

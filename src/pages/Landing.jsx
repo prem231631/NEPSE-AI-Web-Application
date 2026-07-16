@@ -6,6 +6,9 @@ import Journey from "../components/Journey";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 
+import { useState, useEffect } from "react";
+import {FiSettings, FiMoon, FiSun} from "react-icons/fi";
+
 function Landing(){
 
     return(

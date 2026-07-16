@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/register.css";
 import { HiOutlineCpuChip } from "react-icons/hi2";
 import { FaArrowRight } from "react-icons/fa6";
@@ -78,6 +78,15 @@ function Register() {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        const theme =
+            localStorage.getItem("landingTheme") || "dark";
+
+        document.body.classList.remove("dark","light");
+
+        document.body.classList.add(theme);
+    }, []);
 
     return(
         <div className="register-page">

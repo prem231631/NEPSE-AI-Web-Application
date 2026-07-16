@@ -1,4 +1,4 @@
 .landing{
     min-height:100vh;
-    background:#021426;
+    background:var(--background);
 }
