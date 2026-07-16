@@ -1,26 +1,30 @@
 .stock-details-page{
     padding:30px;
+    background:var(--background);
+    min-height:100vh;
 }
 
 .stock-header{
-    background:#07162e;
+    background:var(--card);
     padding:30px;
     border-radius:20px;
     margin-bottom:30px;
+    border:1px solid var(--border);
+    box-shadow:0 10px 25px var(--shadow);
 }
 
 .stock-header h1{
-    color:#3b82f6;
+    color:var(--primary);
     font-size:46px;
 }
 
 .stock-header h2{
-    color:white;
+    color:var(--text);
     margin:10px 0;
 }
 
 .stock-header p{
-    color:#9fb4e5;
+    color:var(--text-secondary);
     margin-bottom:10px;
 }
 
@@ -30,13 +34,15 @@
 }
 
 .history-card{
-    background:#07162e;
+    background:var(--card);
     border-radius:20px;
     padding:25px;
+    border:1px solid var(--border);
+    box-shadow:0 10px 25px var(--shadow);
 }
 
 .history-card h2{
-    color:white;
+    color:var(--text);
     margin-bottom:20px;
 }
 
@@ -46,17 +52,23 @@
 }
 
 .history-card th{
-    color:#9fb4e5;
+    color:var(--text-secondary);
     text-align:left;
     padding:15px;
+    border-bottom:1px solid var(--border);
 }
 
 .history-card td{
-    color:white;
+    color:var(--text);
     padding:15px;
-    border-top:1px solid rgba(255,255,255,.08);
+    border-top:1px solid var(--border);
+    text-align: left;
+}
+
+.history-card tr{
+    transition:.25s;
 }
 
 .history-card tr:hover{
-    background:#1d2a4d;
+    background:var(--secondary);
 }

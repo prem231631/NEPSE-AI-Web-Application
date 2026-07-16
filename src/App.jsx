@@ -8,7 +8,7 @@ import News from "./pages/News";
 import MarketAnalysis from "./pages/MarketAnalysis";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
-import StockDetails from "./Pages/StockDetails";
+import StockDetails from "./pages/StockDetails";
 function App() {
   return (
       <Routes>

@@ -11,13 +11,13 @@ const stocks = [
     },
 
     {
-        symbol: "NTC",
-        name: "Nepal Telecom"
+        symbol: "SCB",
+        name: "Standard Chartered Bank Nepal"
     },
 
     {
-        symbol: "SHIVM",
-        name: "Shivam Cement"
+        symbol: "MBL",
+        name: "Machhapuchchhre Bank Limited"
     },
 
     {
@@ -26,8 +26,8 @@ const stocks = [
     },
 
     {
-        symbol: "GBIME",
-        name: "Global IME Bank"
+        symbol: "SANIMA",
+        name: "Sanima Bank Limited"
     },
 
     {
