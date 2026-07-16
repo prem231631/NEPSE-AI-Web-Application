@@ -1,0 +1,62 @@
+.stock-details-page{
+    padding:30px;
+}
+
+.stock-header{
+    background:#07162e;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.stock-header h1{
+    color:#3b82f6;
+    font-size:46px;
+}
+
+.stock-header h2{
+    color:white;
+    margin:10px 0;
+}
+
+.stock-header p{
+    color:#9fb4e5;
+    margin-bottom:10px;
+}
+
+.stock-header h3{
+    color:#22c55e;
+    font-size:30px;
+}
+
+.history-card{
+    background:#07162e;
+    border-radius:20px;
+    padding:25px;
+}
+
+.history-card h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+.history-card table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.history-card th{
+    color:#9fb4e5;
+    text-align:left;
+    padding:15px;
+}
+
+.history-card td{
+    color:white;
+    padding:15px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.history-card tr:hover{
+    background:#1d2a4d;
+}
