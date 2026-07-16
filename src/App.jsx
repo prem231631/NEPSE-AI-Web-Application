@@ -8,7 +8,7 @@ import News from "./pages/News";
 import MarketAnalysis from "./pages/MarketAnalysis";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
-
+import StockDetails from "./Pages/StockDetails";
 function App() {
   return (
       <Routes>
@@ -20,7 +20,7 @@ function App() {
         <Route path="/marketAnalysis" element={<MarketAnalysis/>}/>
         <Route path="/profile" element = {<Profile/>}/>
         <Route path="/settings" element={<Settings/>}/>
-
+        <Route path="/stock/:symbol" element={<StockDetails/>}/>
       </Routes>
   );
 }
