@@ -38,6 +38,39 @@ function StockDetails() {
         fetchStock();
     }, [symbol]);
 
+    // for Adding and Removing Watchlist
+    const [adding, setAdding] = useState(false);
+
+    const token = localStorage.getItem("token");
+
+    const addToWatchlist = async () => {
+        setAdding(true);
+
+        try {
+            const response = await fetch(
+                `http://127.0.0.1:8001/watchlist/${symbol}`,
+                {
+                    method: "POST",
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                alert(data.detail);
+            } else {
+                alert(data.message);
+            }
+        } catch (err) {
+            alert("Unable to add stock.");
+        }
+
+        setAdding(false);
+    };
+
     return (
         <div className="dashboard-layout">
             <Sidebar sidebarOpen={sidebarOpen} />
@@ -68,6 +101,10 @@ function StockDetails() {
                                     Latest Price :
                                     Rs. {stock.latest_price}
                                 </h3>
+
+                                <button className="watchlist-btn" onClick={addToWatchlist}>
+                                    {adding ? "Adding..." : "Add to Watchlist"}
+                                </button>
 
                             </div>
 

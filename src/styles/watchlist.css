@@ -1,0 +1,153 @@
+.watchlist-page{
+    padding:30px;
+    min-height:80vh;
+}
+
+.watchlist-page h1{
+    color:var(--text-primary);
+    font-size:40px;
+    margin-bottom:30px;
+    text-align: left;
+}
+
+/* Empty State */
+
+.empty-watchlist{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:80px 30px;
+    text-align:center;
+    box-shadow:0 15px 35px var(--shadow-light);
+}
+
+.empty-watchlist h2{
+    color:var(--text-primary);
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.empty-watchlist p{
+    color:var(--text-muted);
+    font-size:18px;
+}
+
+/* Table */
+
+.watchlist-table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 35px var(--shadow-light);
+}
+
+.watchlist-table thead{
+    background:var(--secondary);
+}
+
+.watchlist-table th{
+    padding:20px;
+    text-align:left;
+    color:var(--text-secondary);
+    font-size:14px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.watchlist-table td{
+    padding:22px 20px;
+    color:var(--text-primary);
+    border-top:1px solid var(--border);
+    font-size:16px;
+}
+
+.watchlist-table tbody tr{
+    transition:.25s;
+}
+
+.watchlist-table tbody tr:hover{
+    background:var(--hover);
+}
+
+/* Symbol */
+
+.watchlist-table td:first-child{
+    color:var(--primary);
+    font-weight:700;
+    font-size:18px;
+}
+
+/* Price */
+
+.watchlist-table td:nth-child(4){
+    font-weight:700;
+    color:var(--success);
+}
+
+/* Remove Button */
+
+.remove-btn{
+    padding:10px 22px;
+    border:none;
+    border-radius:10px;
+    background:var(--danger-bg);
+    color:#fff;
+    cursor:pointer;
+    font-weight:600;
+    transition:.25s;
+}
+
+.remove-btn:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+
+/* Loading */
+
+.watchlist-page h3{
+    color:var(--text-secondary);
+    text-align:center;
+    margin-top:80px;
+    font-size:24px;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+    .watchlist-page{
+        padding:20px;
+    }
+
+    .watchlist-page h1{
+        font-size:32px;
+    }
+
+    .watchlist-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+}
+
+@media(max-width:650px){
+
+    .watchlist-page h1{
+        font-size:28px;
+    }
+
+    .empty-watchlist{
+        padding:60px 20px;
+    }
+
+    .empty-watchlist h2{
+        font-size:28px;
+    }
+
+    .empty-watchlist p{
+        font-size:16px;
+    }
+}
