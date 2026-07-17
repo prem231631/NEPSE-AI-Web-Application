@@ -8,8 +8,6 @@ import "./styles/theme.css";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 
-from forgotpassword import router as forgot_router
-
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <ThemeProvider>
@@ -17,5 +15,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </ThemeProvider>
     </BrowserRouter>
 );
-
-App.include_router(forgot_router)

@@ -17,7 +17,7 @@ function ResetPassword(){
 
         e.preventDefault();
 
-        const response=await fetch("http://127.0.0.1:8000/reset-password",{
+        const response=await fetch("http://127.0.0.1:8001/reset-password",{
 
             method:"POST",
 
