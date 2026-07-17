@@ -9,6 +9,10 @@ import MarketAnalysis from "./pages/MarketAnalysis";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import StockDetails from "./pages/StockDetails";
+
+import ForgotPassword from "./Pages/ForgotPassword";
+import ResetPassword from "./Pages/ResetPassword";
+
 function App() {
   return (
       <Routes>
@@ -21,6 +25,9 @@ function App() {
         <Route path="/profile" element = {<Profile/>}/>
         <Route path="/settings" element={<Settings/>}/>
         <Route path="/stock/:symbol" element={<StockDetails/>}/>
+
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
   );
 }
