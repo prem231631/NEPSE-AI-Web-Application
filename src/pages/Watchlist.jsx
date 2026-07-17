@@ -3,6 +3,7 @@ import DashboardNavbar from "../components/DashboardNavbar";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import "../styles/watchlist.css";
+import {useNavigate} from "react-router-dom";
 
 function Watchlist() {
     const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -58,6 +59,9 @@ function Watchlist() {
         loadWatchlist();
     };
 
+    // For navigation
+    const navigate = useNavigate();
+
     return (
         <div className="dashboard-layout">
             <Sidebar sidebarOpen={sidebarOpen} />
@@ -95,7 +99,7 @@ function Watchlist() {
 
                             <tbody>
                                 {watchlist.map((stock) => (
-                                    <tr key={stock.symbol}>
+                                    <tr key={stock.symbol} className="watchlist-row" onClick={() => navigate(`/stock/${stock.symbol}`)}>
                                         <td>{stock.symbol}</td>
 
                                         <td>{stock.name}</td>
@@ -107,9 +111,10 @@ function Watchlist() {
                                         <td>
                                             <button
                                                 className="remove-btn"
-                                                onClick={() =>
+                                                onClick={(e) =>{
+                                                    e.stopPropagation();
                                                     removeStock(stock.symbol)
-                                                }
+                                                }}
                                             >
                                                 Remove
                                             </button>

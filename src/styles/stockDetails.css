@@ -42,7 +42,7 @@
 }
 
 .history-card h2{
-    color:var(--text);
+    color:var(--text-secondary);
     margin-bottom:20px;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .history-card td{
-    color:var(--text);
+    color:var(--text-secondary);
     padding:15px;
     border-top:1px solid var(--border);
     text-align: left;
