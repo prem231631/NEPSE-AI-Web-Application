@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/login.css";
+import "../styles/forgotPassword.css";
 
 function ForgotPassword(){
     const [email,setEmail]=useState("");
@@ -48,29 +48,48 @@ function ForgotPassword(){
         setLoading(false);
     };
 
-    return(
-        <div className="login-page">
-            <div className="login-card">
-                <h2>Forgot Password</h2>
+    return (
+        <div className="forgot-page">
+            <div className="forgot-card">
 
-                <p>Enter your registered email address.</p>
+                <div className="forgot-header">
+                    <h2>Forgot Password</h2>
+                    <p>
+                        Enter your registered email address to receive a verification OTP.
+                    </p>
+                </div>
 
                 <form onSubmit={handleSubmit}>
-                    <div className="input-group">
-                        <label>Email</label>
+                    <div className="forgot-group">
+                        <label>Email Address</label>
 
                         <input
                             type="email"
                             value={email}
-                            onChange={(e)=>setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Enter your email"
                             required
                         />
                     </div>
 
-                    <button className="login-btn">
+                    <button className="forgot-btn">
                         {loading ? "Sending..." : "Send OTP"}
                     </button>
                 </form>
+
+                <div className="login-footer">
+                    Remember your password?
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate("/login");
+                        }}
+                    >
+                        Back to Login
+                    </a>
+                </div>
+
             </div>
         </div>
     );

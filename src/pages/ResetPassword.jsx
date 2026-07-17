@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {useLocation,useNavigate} from "react-router-dom";
-import "../styles/login.css";
+import "../styles/forgotPassword.css";
 
 function ResetPassword(){
     const location=useLocation();
@@ -53,14 +53,21 @@ function ResetPassword(){
 
     };
 
-    return(
-        <div className="login-page">
-            <div className="login-card">
-                <h2>Reset Password</h2>
+    return (
+        <div className="forgot-page">
+            <div className="forgot-card">
+
+                <div className="forgot-header">
+                    <h2>Reset Password</h2>
+                    <p>
+                        Enter the OTP sent to your email and choose a new password.
+                    </p>
+                </div>
 
                 <form onSubmit={handleSubmit}>
-                    <div className="input-group">
-                        <label>Email</label>
+
+                    <div className="forgot-group">
+                        <label>Email Address</label>
 
                         <input
                             value={email}
@@ -68,29 +75,48 @@ function ResetPassword(){
                         />
                     </div>
 
-                    <div className="input-group">
+                    <div className="forgot-group">
                         <label>OTP</label>
 
                         <input
                             value={otp}
-                            onChange={(e)=>setOtp(e.target.value)}
+                            onChange={(e) => setOtp(e.target.value)}
+                            placeholder="Enter OTP"
+                            required
                         />
                     </div>
 
-                    <div className="input-group">
+                    <div className="forgot-group">
                         <label>New Password</label>
 
                         <input
                             type="password"
                             value={password}
-                            onChange={(e)=>setPassword(e.target.value)}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Enter new password"
+                            required
                         />
                     </div>
 
-                    <button className="login-btn">
+                    <button className="forgot-btn">
                         Reset Password
                     </button>
+
                 </form>
+
+                <div className="login-footer">
+                    Remember your password?
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate("/login");
+                        }}
+                    >
+                        Back to Login
+                    </a>
+                </div>
+
             </div>
         </div>
     );

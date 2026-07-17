@@ -108,14 +108,14 @@
     gap:8px;
     background:none;
     border:none;
-    color:var(--text);
+    color: white;
     cursor:pointer;
     font-size:15px;
     transition:.3s;
 }
 
 .settings-btn-nav:hover{
-    color:#3b82f6;
+    color:#1f59d7;
 }
 
 .theme-dropdown{
