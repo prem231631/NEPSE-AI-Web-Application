@@ -130,7 +130,7 @@ function Login() {
                     <div className="login-options">
                         <label><input type="checkbox"/>Remember me</label>
 
-                        <a href="#"> Forgot password?</a>
+                        <Link to="/forgot-password">Forgot Password?</Link>
                     </div>
 
                     {error && <p style={{ color: "red" }}>{error}</p>}
