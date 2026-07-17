@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from signup import router as signup_router
 from login import router as login_router
+from forgot_password import router as forgot_password_router
 from stocks import router as stocks_router
 from watchlist import router as watchlist_router
 from database import Base, engine
@@ -23,6 +24,7 @@ app.add_middleware(
 Base.metadata.create_all(bind=engine)
 app.include_router(signup_router)
 app.include_router(login_router)
+app.include_router(forgot_password_router)
 app.include_router(stocks_router)
 app.include_router(watchlist_router)
 app.include_router(news_router)
